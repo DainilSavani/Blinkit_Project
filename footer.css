@@ -1,0 +1,42 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section.foot {
+    display: flex;
+    justify-content: space-between;
+    margin: 3% 10% 3% 10%;
+    color: gray;
+}
+div.foot_left {
+    font-size: 0.8rem;
+}
+div.foot_middle {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    justify-content: center;
+}
+div.foot_middle > img {
+    width: 20%;
+    margin: 0% 2%;
+}
+div.foot_middle > img:hover {
+    cursor: pointer;
+}
+div.foot_right {
+    width: 20%
+}
+div.foot_right > a{
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin: 0% 2% 0% 2%;
+    text-align: center;
+    background-color: rgb(36, 36, 38);
+    border-radius: 50%;
+    padding: 3%;
+    width: 12%;
+}
