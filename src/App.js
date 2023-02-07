@@ -9,7 +9,8 @@ import { stateSetter, dataFetchError } from './helpers/app.general';
 
 // components
 import HomePage from "./pages/homePage";
-import BillingPage from './pages/billingPage'
+import BillingPage from './pages/billingPage';
+import OrderConfirmationPage from './pages/orderConfirmationPage';
 
 
 export class App extends Component {
@@ -44,6 +45,11 @@ export class App extends Component {
               vegetableItems={this.state.vegetableItems}
               cartDetails={this.state.cartDetails}
               appSetState={this.setState} 
+            />
+          }/>
+          <Route path='/confirmation' element={
+            <OrderConfirmationPage
+              cartDetails={this.state.cartDetails}
             />
           }/>
         </Routes>

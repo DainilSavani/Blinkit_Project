@@ -1,0 +1,5 @@
+@import '../../commonlyUsedStyles.scss';
+
+div.orderConfirmationPage {
+    @include initialStyle;
+}

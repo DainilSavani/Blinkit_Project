@@ -1,0 +1,18 @@
+@import '../../../../commonlyUsedStyles.scss';
+
+div.trackOrderDownloadApp {
+    text-align: center;
+
+    h3 {
+        font-size: 2rem;
+        margin: 0.2rem;
+    }
+    p {
+        font-size: 0.8rem;
+    }
+    img {
+        width: 7rem;
+        margin: 0 0.6rem;
+        cursor: pointer;
+    }
+}
