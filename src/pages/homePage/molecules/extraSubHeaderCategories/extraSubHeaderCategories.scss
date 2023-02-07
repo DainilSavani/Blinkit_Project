@@ -1,0 +1,9 @@
+@import '../commonlyUsedStyles.scss';
+
+select.extraCategories {
+    @include categoriesStyle();
+    border: 0;
+    height: 2.6rem;
+    padding: 0.2rem;
+    width: 4rem;
+}

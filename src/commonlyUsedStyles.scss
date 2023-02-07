@@ -1,0 +1,46 @@
+$borderValue: 0.03125rem;
+$borderSide: $borderValue solid rgb(188, 187, 187);
+
+@mixin border($value: 0.03125rem, $shade: rgb(188, 187, 187)) {
+    border: $value solid $shade
+}
+
+@mixin flexDisplay($contentPosition: center, $itemPosition: center) {
+    display: flex;
+    justify-content: $contentPosition;
+    align-items: $itemPosition;
+}
+
+@mixin initialStyle {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@mixin cartBtn {
+    background-color: green;
+    color: white;
+    border: 0;
+    border-radius: $borderValue*10;
+    cursor: pointer;
+}
+
+@mixin addItemBtn {
+    @include flexDisplay();
+    border: none;
+    color: white;
+    background-color: green;
+    width: 5rem;
+    height: 2rem;
+    font-size: 1.05rem;
+
+    &:nth-child(1) {
+        border-radius: 0.4rem 0 0 0.4rem;
+        cursor: pointer;
+    }
+
+    &:nth-child(3) {
+        border-radius: 0 0.4rem 0.4rem 0;
+        cursor: pointer;
+    }
+}
