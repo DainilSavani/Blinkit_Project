@@ -1,5 +1,5 @@
 // constants
-import CART_DETAILS from '../constants/cartDetailsConstant';
+import CART_DETAILS from '../constants/initialCartConstants';
 
 const initialState = {
     vegetableItems: [],

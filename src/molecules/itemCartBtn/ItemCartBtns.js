@@ -11,14 +11,14 @@ import './itemCartBtns.scss';
 
 class ItemCartBtns extends Component {
     render() {
-        const { vegetableItem } = this.props;
+        const { vegetableItem, itemIndex } = this.props;
         return (vegetableItem.count)
             ? <div className="billItemBtn">
                 <ItemDecrementBtn {...this.props} />
                 <div className='itemValue'>{vegetableItem.count}</div>
                 <ItemIncrementBtn  {...this.props} />
             </div>
-            : <ItemAddBtn {...this.props} />
+            : <ItemAddBtn itemIndex={itemIndex} />
     }
 }
 

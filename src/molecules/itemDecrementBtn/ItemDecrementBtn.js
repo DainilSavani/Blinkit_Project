@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'; 
 
 // helper functions
 import decrementClickHandler from './helpers/decrementItemHandler';
+
+// actions
+import { decrementItemHandler, decrementCartHandler } from "../../redux/actions";
 
 class ItemDecrementBtn extends Component {
     render() {
@@ -11,4 +15,11 @@ class ItemDecrementBtn extends Component {
     }
 }
 
-export default ItemDecrementBtn
+const mapDispatchToProps = dispatch => {
+    return {
+        decrementItemHandler: itemIndex => dispatch(decrementItemHandler(itemIndex)),
+        decrementCartHandler: itemIndex => dispatch(decrementCartHandler(itemIndex))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(ItemDecrementBtn);

@@ -1,18 +1,17 @@
-import React from 'react';
 import { Provider } from 'react-redux';
-
-// components
-import OrderConfirmationPage from './pages/orderConfirmationPage';
 
 // redux store
 import store from './redux/store';
 
+// components
+import BillingPage from './pages/billingPage';
+
 function App() {
   return (
     <Provider store={store}>
-      <OrderConfirmationPage />
-    </Provider>
-  )
+      <BillingPage />
+    </Provider>  
+  );
 }
 
-export default App
+export default App;

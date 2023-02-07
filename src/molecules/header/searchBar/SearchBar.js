@@ -12,7 +12,7 @@ class SearchBar extends Component {
         const { parentSetState } = this.props;
         return (
             <input id="searchBar" type="text" placeholder="search" autoComplete='off'
-                onKeyUp={(event) => searchVegetableHandler(parentSetState, event.target.value, )} />
+                onKeyUp={(event) => searchVegetableHandler(parentSetState, event.target.value)} />
         )
     }
 }
