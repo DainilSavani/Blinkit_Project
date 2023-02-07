@@ -1,14 +1,14 @@
 import produce from "immer";
 import PropTypes from 'prop-types';
 
-const decrementItem = ({ itemIndex, homePageSetState }) => {
-    homePageSetState(produce(draft => {
+const decrementItem = ({ itemIndex, appSetState }) => {
+    appSetState(produce(draft => {
         draft.vegetableItems[itemIndex].count -= 1;
     }));
 }
 
-const decrementCart = ({ itemIndex, homePageSetState }) => {
-    homePageSetState(produce(draft => {
+const decrementCart = ({ itemIndex, appSetState }) => {
+    appSetState(produce(draft => {
         const vegetableItem = draft.vegetableItems[itemIndex];
         draft.cartDetails.itemsCount -= 1;
         draft.cartDetails.itemsOriginalPrice -= vegetableItem.originalPrice;
@@ -23,11 +23,11 @@ const decrementClickHandler = (props) => {
 
 decrementClickHandler.propTypes = {
     itemIndex: PropTypes.number,
-    homePageSetState: PropTypes.func
+    appSetState: PropTypes.func
 }
 decrementClickHandler.defaultProps = {
     itemIndex: -1,
-    homePageSetState: () => {}
+    appSetState: () => {}
 }
 
 export default decrementClickHandler;

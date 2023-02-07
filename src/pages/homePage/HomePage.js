@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
 
-// contants
-import  CART_DETAILS from './contants/homePageConstants';
-
-// helper functions
-import { stateSetter, dataFetchError } from './helpers/homePage.general';
-
 // components
 import Navbar from '../../molecules/header/navbar';
 import SubHeaderCategories from './molecules/subHeaderCategories'
@@ -20,31 +14,25 @@ class HomePage extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            vegetableItems: [],
-            cartDetails: CART_DETAILS,
-            searchBarValue: "",
+            searchBarValue: ""
         }
         this.setState = this.setState.bind(this);
     }
-    componentDidMount() {
-        fetch('http://localhost:5000/VEGETABLE_ITEMS')  //fetching data through json server
-        .then(response => response.json())
-        .then(result => stateSetter(this.setState, result))
-        .catch(dataFetchError);
-    }
     
     render() {
+        const { vegetableItems, cartDetails, appSetState } = this.props;
         return (
             <div className='homePage'>
                 <Navbar 
-                    cartDetails = { this.state.cartDetails } 
-                    homePageSetState = { this.setState }
+                    cartDetails = { cartDetails } 
+                    parentSetState = { this.setState }
                 />
                 <SubHeaderCategories />
                 <MainProductSection 
-                    vegetableItems = { this.state.vegetableItems } 
+                    vegetableItems = { vegetableItems } 
                     searchBarValue = { this.state.searchBarValue }
-                    homePageSetState = { this.setState }
+                    parentSetState = { this.setState }
+                    appSetState = { appSetState }
                 />
                 <ServiceSection />
                 <Footer />
