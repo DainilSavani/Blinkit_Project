@@ -1,0 +1,53 @@
+@import '../../../../commonlyUsedStyles.scss';
+
+section.paymentProceedSection {
+    display: flexbox;
+    width: 47rem;
+    margin: 1rem auto;
+
+    div.coupon {
+        padding: 0.4rem 0 0.4rem 0.9rem;
+        font-size: 0.9rem;
+        color: gray;
+        background-color: rgb(249, 248, 248);
+        border-radius: 0.4rem;
+    }
+
+    div.proceed {
+        margin: 1rem 0;
+        background-color: rgb(249, 248, 248);
+        padding: 0.6rem 0.9rem;
+        border-radius: 0.4rem;
+    }
+
+    div.proceedBar {
+        display: flex;
+        justify-content: space-between;
+        background-color: green;
+        padding: 0.6rem 0.9rem;
+        color: white;
+        border-radius: 0.4rem;
+
+        div.proceedItems {
+            display: flex;
+            align-items: center;
+            width: 2rem;
+
+            p {
+                margin: 0 0.2rem;
+                font-weight: bold;
+            }
+            s{
+                margin: 0 0.2rem
+            }
+        }
+
+        div.proceedBtn {
+            font-weight: bold;
+            cursor: pointer;
+            p{
+                margin: 0;
+            }
+        }
+    }
+}

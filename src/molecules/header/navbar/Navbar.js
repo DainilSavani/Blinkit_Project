@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { PropTypes } from "prop-types";
+import { Link } from 'react-router-dom';
 
 // components
 import UserLocation from '../userLocation';
@@ -11,14 +12,18 @@ import './navbar.scss';
 
 class Navbar extends Component {
     render() {
-        const { cartDetails, homePageSetState } = this.props;
+        const { cartDetails, parentSetState } = this.props;
         return (
             <header className='navBar'>
-                <img id="logo" name="logo" src="https://blinkit.com/9f644712ea8611916099.png" alt="logo"/>
+                <Link to='/' className='logoLink'>
+                    <img id="logo" name="logo" src="https://blinkit.com/9f644712ea8611916099.png" alt="logo" />
+                </Link>
                 <UserLocation />
-                <SearchBar homePageSetState = { homePageSetState } />
+                <SearchBar parentSetState={parentSetState} />
                 <a id="loginLink">Login</a>
-                <CartBtn {...cartDetails} />
+                <Link to='/checkout'>
+                    <CartBtn {...cartDetails} />
+                </Link>
             </header>
         )
     }
@@ -26,7 +31,7 @@ class Navbar extends Component {
 
 Navbar.propTypes = {
     cartDetails: PropTypes.object,
-    homePageSetState: PropTypes.func
+    parentSetState: PropTypes.func
 }
 
 export default Navbar

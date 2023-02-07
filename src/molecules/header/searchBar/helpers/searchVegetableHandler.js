@@ -1,5 +1,5 @@
-const searchVegetableHandler = (homePageSetState, value) => {
-    homePageSetState(prevState => (
+const searchVegetableHandler = (setState, value) => {
+    setState(prevState => (
         {...prevState, searchBarValue: value}
     ));
 }

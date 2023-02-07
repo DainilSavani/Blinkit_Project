@@ -9,19 +9,19 @@ import './searchBar.scss';
 
 class SearchBar extends Component {
     render() {
-        const { homePageSetState } = this.props;
+        const { parentSetState } = this.props;
         return (
             <input id="searchBar" type="text" placeholder="search" autoComplete='off'
-                onKeyUp={(event) => searchVegetableHandler(homePageSetState, event.target.value, )} />
+                onKeyUp={(event) => searchVegetableHandler(parentSetState, event.target.value, )} />
         )
     }
 }
 
 SearchBar.propTypes = {
-    homePageSetState: PropTypes.func
+    parentSetState: PropTypes.func
 }
 SearchBar.defaultProps = {
-    homePageSetState: () => {}
+    parentSetState: () => {}
 }
 
 export default SearchBar;
