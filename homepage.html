@@ -5,11 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/homepage.css">
+    <link rel="stylesheet" href="/navbar.css">
     <script src="https://unpkg.com/htmlincludejs"></script>
+    <script type="module" src="/homescript.mjs"></script>
     <title>Everything delivered in minutes | blinkit</title>
 </head>
 <body>
-    <include class="navbar" src="/navbar.html"></include>
+    <div class="navbar">
+        <div class="logo">
+            <img src="images/logo.webp" alt="error">
+        </div>
+        <div class="location">
+            <h1>Delivery in 10 minutes</h1>
+            <select name="location">
+                <option value="del">Delhi, India</option>
+                <option value="ban">Bangaluru, India</option>
+                <option value="bom">Bombay, India</option>
+            </select>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="search">
+        </div>
+        <div class="login">
+            <a href="">Login</a>
+        </div>
+        <div class="cart">
+            <button class="cart_btn" id="cart_btn_id">
+                <img src="/images/download.png" alt="error">
+                <div class="cart_btn_text">My Cart</div>
+            </button>
+        </div>
+    </div>
+    <div class="list">
+        <p>Vegetables & Fruits</p>
+        <p>Dairy & Breakfast</p>
+        <p>Muchies</p>
+        <p>Cold Drinks & Juices</p>
+        <p>Instant & Frozen Food</p>
+        <p>Tea, Coffee & Health Drinks</p>
+        <p>Bakery & Biscuits</p>
+        <p>More</p>
+    </div>
+    <!-- <include class="navbar" src="/navbar.html"></include> -->
     <div class="content">
         <div class="cat">
             <div class="subcat">
@@ -67,260 +104,12 @@
                 </div>
             </div>
             <div class="container">
-                <div class="item">
-                    <div class="discount">
-                        <p>18% OFF</p>
-                    </div>
-                    <div class="img">
-                        <img src="/images/vegetables/potato.avif" alt="error">
-                    </div>
-                    <div class="time">
-                        <img width="12" height="12" loading="lazy" src="https://cdn.grofers.com/assets/ui/fresh_icon.png">
-                        <p>Sourced at 5 AM</p>
-                    </div>
-                    <div class="name">
-                        <p>New Potato (Aloo)</p>
-                    </div>
-                    <div class="weight"><p>1 kg</p></div>
-                    <div class="price">
-                        <div class="value">
-                            <p>₹15</p>     
-                            <s>₹17</s>
-                        </div>
-                        <div class="add_btn">
-                            <button>ADD</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="discount">
-                        <p>21% OFF</p>
-                    </div>
-                    <div class="img">
-                        <img src="/images/vegetables/onion.avif" alt="error">
-                    </div>
-                    <div class="time">
-                        <img width="12" height="12" loading="lazy" src="https://cdn.grofers.com/assets/ui/fresh_icon.png">
-                        <p>Sourced at 5 AM</p>
-                    </div>
-                    <div class="name">
-                        <p>Onion (Pyaz)</p>
-                    </div>
-                    <div class="weight"><p>1 kg</p></div>
-                    <div class="price">
-                        <div class="value">
-                            <p>₹32</p>
-                            <s>₹41</s>
-                        </div>
-                        <div class="add_btn">
-                            <button>ADD</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="discount">
-                        <p>10% OFF</p>
-                    </div>
-                    <div class="img">
-                        <img src="/images/vegetables/carrot.avif" alt="error">
-                    </div>
-                    <div class="time">
-                        <img width="12" height="12" loading="lazy" src="https://cdn.grofers.com/assets/ui/fresh_icon.png">
-                        <p>Sourced at 5 AM</p>
-                    </div>
-                    <div class="name">
-                        <p>Local Carrot</p>
-                    </div>
-                    <div class="weight"><p>500 g</p></div>
-                    <div class="price">
-                        <div class="value">
-                            <p>₹17</p>
-                            <s>₹19</s>
-                        </div>
-                        <div class="add_btn">
-                            <button>ADD</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="discount">
-                        <p>16% OFF</p>
-                    </div>
-                    <div class="img">
-                        <img src="/images/vegetables/chilli.avif" alt="error">
-                    </div>
-                    <div class="time">
-                        <img width="12" height="12" loading="lazy" src="https://cdn.grofers.com/assets/ui/fresh_icon.png">
-                        <p>Sourced at 5 AM</p>
-                    </div>
-                    <div class="name">
-                        <p>Green Chilli (Hari Mirch</p>
-                    </div>
-                    <div class="weight"><p>100 g</p></div>
-                    <div class="price">
-                        <div class="value">
-                            <p>₹10</p>
-                            <s>₹12</s>
-                        </div>
-                        <div class="add_btn">
-                            <button>ADD</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="discount">
-                        <p>23% OFF</p>
-                    </div>
-                    <div class="img">
-                        <img src="/images/vegetables/hybrid tomato.avif" alt="error">
-                    </div>
-                    <div class="time">
-                        <img width="12" height="12" loading="lazy" src="https://cdn.grofers.com/assets/ui/fresh_icon.png">
-                        <p>Sourced at 5 AM</p>
-                    </div>
-                    <div class="name">
-                        <p>Hybrid Tomato (Tamatar)</p>
-                    </div>
-                    <div class="weight"><p>500 g</p></div>
-                    <div class="price">
-                        <div class="value">
-                            <p>₹15</p>
-                            <s>₹19</s>
-                        </div>
-                        <div class="add_btn">
-                            <button>ADD</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="discount">
-                        <p>17% OFF</p>
-                    </div>
-                    <div class="img">
-                        <img src="/images/vegetables/cauliflower.avif" alt="error">
-                    </div>
-                    <div class="time">
-                        <img width="12" height="12" loading="lazy" src="https://cdn.grofers.com/assets/ui/fresh_icon.png">
-                        <p>Sourced at 5 AM</p>
-                    </div>
-                    <div class="name">
-                        <p>Cauliflower</p>
-                    </div>
-                    <div class="weight"><p>1 piece (400 g - 600 g)</p></div>
-                    <div class="price">
-                        <div class="value">
-                            <p>₹23</p>
-                            <s>₹28</s>
-                        </div>
-                        <div class="add_btn">
-                            <button>ADD</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="discount">
-                        <p>16% OFF</p>
-                    </div>
-                    <div class="img">
-                        <img src="/images/vegetables/desi tomato.avif" alt="error">
-                    </div>
-                    <div class="time">
-                        <img width="12" height="12" loading="lazy" src="https://cdn.grofers.com/assets/ui/fresh_icon.png">
-                        <p>Sourced at 5 AM</p>
-                    </div>
-                    <div class="name">
-                        <p>Desi Tomato (Desi Tamatar)</p>
-                    </div>
-                    <div class="weight"><p>500 g</p></div>
-                    <div class="price">
-                        <div class="value">
-                            <p>₹20</p>
-                            <s>₹24</s>
-                        </div>
-                        <div class="add_btn">
-                            <button>ADD</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="discount">
-                        <p>21% OFF</p>
-                    </div>
-                    <div class="img">
-                        <img src="/images/vegetables/ginger.avif" alt="error">
-                    </div>
-                    <div class="time">
-                        <img width="12" height="12" loading="lazy" src="https://cdn.grofers.com/assets/ui/fresh_icon.png">
-                        <p>Sourced at 5 AM</p>
-                    </div>
-                    <div class="name">
-                        <p>Ginger (Adrak)</p>
-                    </div>
-                    <div class="weight"><p>250 g</p></div>
-                    <div class="price">
-                        <div class="value">
-                            <p>₹37</p>
-                            <s>₹47</s>
-                        </div>
-                        <div class="add_btn">
-                            <button>ADD</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="discount">
-                        <p>12% OFF</p>
-                    </div>
-                    <div class="img">
-                        <img src="/images/vegetables/sweet potato.avif" alt="error">
-                    </div>
-                    <div class="time">
-                        <img width="12" height="12" loading="lazy" src="https://cdn.grofers.com/assets/ui/fresh_icon.png">
-                        <p>Sourced at 5 AM</p>
-                    </div>
-                    <div class="name">
-                        <p>Sweet Potato (Shakarkandi)</p>
-                    </div>
-                    <div class="weight"><p>500 g - 700 g</p></div>
-                    <div class="price">
-                        <div class="value">
-                            <p>₹55</p>
-                            <s>₹60</s>
-                        </div>
-                        <div class="add_btn">
-                            <button>ADD</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="discount">
-                        <p>14% OFF</p>
-                    </div>
-                    <div class="img">
-                        <img src="/images/vegetables/bitter gourd.avif" alt="error">
-                    </div>
-                    <div class="time">
-                        <img width="12" height="12" loading="lazy" src="https://cdn.grofers.com/assets/ui/fresh_icon.png">
-                        <p>Sourced at 5 AM</p>
-                    </div>
-                    <div class="name">
-                        <p>Bitter Gourd (Karela)</p>
-                    </div>
-                    <div class="weight"><p>250 g - 300 g</p></div>
-                    <div class="price">
-                        <div class="value">
-                            <p>₹29</p>
-                            <s>₹34</s>
-                        </div>
-                        <div class="add_btn">
-                            <button>ADD</button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
     <include class="services" src="/services.html"></include>
     <include class="footer" src="/footer.html"></include>
 </body>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<script type="module" src="/script.mjs" defer></script>
 </html>

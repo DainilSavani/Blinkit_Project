@@ -5,102 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="billing.css">
+    <link rel="stylesheet" href="navbar.css">
     <script src="https://unpkg.com/htmlincludejs"></script>
+    <script type="module" src="/billing.mjs" defer></script>
     <title>Your Shopping Cart</title>
 </head>
 <body>
-    <include class="navbar" src="/navbar.html"></include>
+    <div class="navbar">
+        <div class="logo">
+            <img src="images/logo.webp" alt="error">
+        </div>
+        <div class="location">
+            <h1>Delivery in 10 minutes</h1>
+            <select name="location">
+                <option value="del">Delhi, India</option>
+                <option value="ban">Bangaluru, India</option>
+                <option value="bom">Bombay, India</option>
+            </select>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="search">
+        </div>
+        <div class="login">
+            <a href="">Login</a>
+        </div>
+        <div class="cart">
+            <button class="cart_btn" id="cart_btn_id">
+                <img src="/images/download.png" alt="error">
+                <div class="cart_btn_text">My Cart</div>
+            </button>
+        </div>
+    </div>
+    <div class="list">
+        <p>Vegetables & Fruits</p>
+        <p>Dairy & Breakfast</p>
+        <p>Muchies</p>
+        <p>Cold Drinks & Juices</p>
+        <p>Instant & Frozen Food</p>
+        <p>Tea, Coffee & Health Drinks</p>
+        <p>Bakery & Biscuits</p>
+        <p>More</p>
+    </div>
+    <!-- <include class="navbar" src="/navbar.html"></include> -->
     <section class="bill">
         <div class="heading">
             <p>Place Order</p>
         </div>
         <div class="subheading">
-            <h4>Delivery in 10 minutes</h4>
-            <p>6 items</p>
         </div>
         <div class="bill_container">
-            <div class="bill_item">
-                <img src="/images/vegetables/potato.avif" alt="error">
-                <div class="bill_item_detail">
-                    <div class="bill_item_name">
-                        <p>New Potato</p>
-                    </div>
-                    <div class="bill_item_weight">
-                        <p>1 kg</p>
-                    </div>
-                    <div class="bill_item_price">
-                        <p>₹15</p>
-                        <s>₹17</s>
-                    </div>
-                </div>
-                <div class="bill_item_btn">
-                    <div class="decrease_item">-</div>
-                    <div class="item_value">2</div>
-                    <div class="increase_item">+</div>
-                </div>
-            </div>
-            <div class="bill_item">
-                <img src="/images/vegetables/carrot.avif" alt="error">
-                <div class="bill_item_detail">
-                    <div class="bill_item_name">
-                        <p>Local Carrot</p>
-                    </div>
-                    <div class="bill_item_weight">
-                        <p>500 g</p>
-                    </div>
-                    <div class="bill_item_price">
-                        <p>₹17</p>
-                        <s>₹19</s>
-                    </div>
-                </div>
-                <div class="bill_item_btn">
-                    <div class="decrease_item">-</div>
-                    <div class="item_value">1</div>
-                    <div class="increase_item">+</div>
-                </div>
-            </div>
-            <div class="bill_item">
-                <img src="/images/vegetables/onion.avif" alt="error">
-                <div class="bill_item_detail">
-                    <div class="bill_item_name">
-                        <p>Onion</p>
-                    </div>
-                    <div class="bill_item_weight">
-                        <p>1 kg</p>
-                    </div>
-                    <div class="bill_item_price">
-                        <p>₹32</p>
-                        <s>₹41</s>
-                    </div>
-                </div>
-                <div class="bill_item_btn">
-                    <div class="decrease_item">-</div>
-                    <div class="item_value">1</div>
-                    <div class="increase_item">+</div>
-                </div>
-            </div>
         </div>
-        <div class="total">
-            <div class="mrp">
-                <p>MRP</p>
-                <p>₹176</p>
-            </div>
-            <div class="product_discount">
-                <p>Product discount</p>
-                <p>-₹33</p>
-            </div>
-            <div class="delivery_charge">
-                <p>Delivery charge</p>
-                <div class="charge">
-                    <s>₹15</s>
-                    <p>FREE</p>
-                </div>
-            </div>
-            <div class="grand_total">
-                <p>Grand total</p>
-                <p>₹143</p>
-            </div>
-        </div>
+        <div class="total"></div>
     </section>
     <section class="bill_total">
         <div class="coupon">
@@ -108,16 +63,6 @@
         </div>
         <div class="proceed">
             <div class="proceed_bar">
-                <div class="proceed_items">
-                    <p>6</p>
-                    <p>items</p>
-                    <p>:</p>
-                    <p>₹143</p>
-                    <s>₹176</s>
-                </div>
-                <div class="proceed_btn">
-                    <p>Proceed ></p>
-                </div>
             </div>
         </div>
     </section>

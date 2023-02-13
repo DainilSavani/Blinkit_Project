@@ -20,6 +20,7 @@ div.logo {
     margin: 0px;
     border-right: 0.5px solid rgb(188, 187, 187);
     width: 11%;
+    cursor: pointer;
 }
 div.logo > img {
     width: 65%;
@@ -85,23 +86,23 @@ div.cart {
     border: 0px;
     border-radius: 5px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 .cart_btn:hover {
     background-color: rgb(54, 87, 4);
 }
 .cart_btn > img {
     width: 25%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
     display: inline-block;
-    float: left;
     color: white;
-    padding:7%;
 }
-.cart_btn > p{
-    padding-top: 11%;
-    font-size: 1.1rem;
-}
-.cart_btn > img::after {
-    float: none;
+.cart_btn > div{
+    font-weight: bold;
+    font-size: 120%;
 }
 
 /* For list */
