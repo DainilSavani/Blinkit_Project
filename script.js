@@ -89,7 +89,7 @@ function setActionOnItem(j) {
         let price = getStorage("price");
         let items = getStorage("items");
         items[j].count -= 1;
-        price.mrp = items[j].old_price;
+        price.mrp -= items[j].old_price;
         price.it--;
         price.disc -= items[j].new_price;
         if (items[j].count === 0) {
@@ -128,10 +128,7 @@ function setActionOnItem(j) {
     for (let i = 0; i < no_of_items; i++) {
         if (items[i].count == 0) {
             setActionOnAdd(i);
-        }
-    }
-    for (let i = 0; i < no_of_items; i++) {
-        if (items[i].count > 0) {
+        } else if (items[i].count > 0) {
             setActionOnItem(i);
         }
     }

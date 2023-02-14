@@ -9,6 +9,7 @@ var items2 = getStorage("items2");
 var price2 = getStorage("price2");
 var items = localStorage.getItem("items");
 var price = localStorage.getItem("price");
+let prod_count = 0;
 if (JSON.stringify(items2) != items) {
     items2 = JSON.parse(items);
     price2 = JSON.parse(price);
@@ -32,11 +33,11 @@ function createBillElement(item, i) {
                     <p>${item.name}</p>
                     </div>
                     <div class="bill_item_weight">
-                        <p>${item.weight * item.count} kg</p>
+                        <p>${item.weight} kg</p>
                     </div>
                     <div class="bill_item_price">
-                        <p>₹${item.new_price * item.count}</p>
-                        <s>₹${item.old_price * item.count}</s>
+                        <p>₹${item.new_price}</p>
+                        <s>₹${item.old_price}</s>
                     </div>
                 </div>
                 <div class="bill_item_btn">
@@ -55,11 +56,11 @@ function createBillElement(item, i) {
                     <p>${item.name}</p>
                     </div>
                     <div class="bill_item_weight">
-                        <p>${item.weight * 1000 * item.count} g</p>
+                        <p>${item.weight * 1000} g</p>
                     </div>
                     <div class="bill_item_price">
-                        <p>₹${item.new_price * item.count}</p>
-                        <s>₹${item.old_price * item.count}</s>
+                        <p>₹${item.new_price}</p>
+                        <s>₹${item.old_price}</s>
                     </div>
                 </div>
                 <div class="bill_item_btn">
@@ -75,7 +76,6 @@ function createBillElement(item, i) {
 
 const container = document.getElementsByClassName("bill_container")[0];
 const cart_btn_text = document.getElementsByClassName("cart_btn_text")[0];
-let prod_count = 0;
 
 function loadCartBtn() {
     let price2 = getStorage("price2");
@@ -127,7 +127,7 @@ function add_event() {
                     bill_item_value.innerHTML = items2[i].count;
                 }
                 setStorage("price2", price2);
-                setStorage("items2", items2);
+                setStorage("items2", items2); 
                 load_items_count();
                 loadCartBtn();
                 load_total();
@@ -143,6 +143,7 @@ function add_event() {
                 bill_item_value.innerHTML = items2[i].count;
                 setStorage("price2", price2);
                 setStorage("items2", items2);
+                load_items_count();
                 loadCartBtn();
                 load_total();
                 load_proceed();

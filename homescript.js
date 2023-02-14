@@ -99,21 +99,12 @@ var items = [
         "new_price": 29,
         "old_price": 34
     }
-]
+];
 var price = {
     mrp: 0,
     it: 0,
     disc: 0,
     total: 0
-}
-var items2 = localStorage.getItem("items2");
-var price2 = localStorage.getItem("price2");
-if (items2!=null && items2!=undefined && JSON.stringify(items)!=items2) {
-    items = JSON.parse(items2);
-    price = JSON.parse(price2);
-} else {
-    items2 = items;
-    price2 = price;
 }
 
 function setStorage(key, value) {
