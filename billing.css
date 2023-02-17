@@ -145,3 +145,15 @@ div.proceed_btn {
     cursor: pointer;
 }
 
+iframe{
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    border: none;
+}
+iframe.services {
+height: 29rem;
+}
+iframe.footer {
+height: 7rem;
+}

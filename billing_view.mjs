@@ -1,15 +1,18 @@
 export class View {
     constructor() {
-        this.element;
-        this.logo = document.getElementsByClassName("logo")[0];
+        this.element, this.iframe, this.logo, this.cart_btn_text;
         this.subheading = document.getElementsByClassName("subheading")[0];
         this.container = document.getElementsByClassName("bill_container")[0];
-        this.cart_btn_text = document.getElementsByClassName("cart_btn_text")[0];
         this.proceed = document.getElementsByClassName("proceed_bar")[0];
         this.bill = document.getElementsByClassName("total")[0];
+        this.iframe = document.getElementsByTagName("iframe")[0];
+        setTimeout(() => {
+            this.logo = this.iframe.contentDocument.getElementsByClassName("logo")[0];
+            this.cart_btn_text = this.iframe.contentDocument.getElementsByClassName("cart_btn_text")[0];
+        }, 10);
     }
     returnEleById(key, value) {
-        return document.getElementById(key+value);
+        return document.getElementById(key + value);
     }
     createBillElement(item, i) {
         this.element;
@@ -62,9 +65,9 @@ export class View {
         }
         return this.element;
     }
-    loadCartBtn(price2) {
+    loadCartBtn(price2, view) {
         if (price2.it != 0 && price2.disc != 0) {
-            this.cart_btn_text.innerHTML = `
+            view.cart_btn_text.innerHTML = `
                 <p>${price2.it} items</p>
                 <p>₹${price2.disc}</p>
             `;

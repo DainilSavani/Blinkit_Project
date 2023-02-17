@@ -8,8 +8,9 @@ export class View {
         this.add_item_value = new Array(no_of_items);
         this.add_decrease_item = new Array(no_of_items);
         this.add_increase_item = new Array(no_of_items);
-        this.cart_btn_id = document.getElementById("cart_btn_id");
-        this.cart_btn_text = document.getElementsByClassName("cart_btn_text")[0];
+        this.iframe = document.getElementsByTagName("iframe")[0];
+        this.cart_btn_id = this.iframe.contentDocument.getElementById("cart_btn_id");
+        this.cart_btn_text = this.iframe.contentDocument.getElementsByClassName("cart_btn_text")[0];
     }
     loadItems(item, flag) {
         if (flag) {

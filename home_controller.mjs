@@ -6,9 +6,6 @@ class Controller {
         this.loadProduct();
         model.setStorage("items", model.items);
         model.setStorage("price", model.price);
-        this.load_add_or_item_btn();
-        this.setAction();
-        this.cartBtnAction();
     }
     loadProduct() {
         for (let i=0; i<model.items.length; i++) {
@@ -103,6 +100,23 @@ class Controller {
     }
 }
 
-let model = new Model();
-let view = new View(model.no_of_items);
-let control = new Controller();
+let model, view, control;
+let promise = fetch('./items.json');
+promise.then((resolve) => {
+    return resolve.json();
+}).then((data) => {
+    console.log(data);
+    model = new Model(data);
+    return model;
+}).then((model) => {
+    model.validate();
+    view = new View(model.no_of_items);
+    return view;
+}).then((view) => {
+    return view
+}).then((view) => {
+    control = new Controller();
+    control.load_add_or_item_btn();
+    control.setAction();
+    control.cartBtnAction();
+});

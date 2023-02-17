@@ -6,6 +6,7 @@
 
 /* For categories */
 
+
 div.content{
     display: flex;
     justify-content: center;
@@ -187,4 +188,17 @@ div.add_item_btn > div:nth-child(1) {
 div.add_item_btn > div:nth-child(3) {
     border-radius: 0% 20% 20% 0%;
     cursor: pointer;
+}
+
+iframe {
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    border: none;
+}
+iframe.services {
+    height: 29rem;
+}
+iframe.footer {
+    height: 7rem;
 }

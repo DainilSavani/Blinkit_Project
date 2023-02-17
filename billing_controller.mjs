@@ -6,7 +6,7 @@ class Controller {
         this.load_logo_link();
         view.load_items_count(model.getStorage("price2"));
         this.load_items();
-        view.loadCartBtn(model.getStorage("price2"));
+        view.loadCartBtn(model.getStorage("price2"), view);
         this.add_event();
         this.load_total();
         this.load_proceed();
@@ -48,13 +48,13 @@ class Controller {
                     model.setStorage("price2", price2);
                     model.setStorage("items2", items2); 
                     view.load_items_count(price2);
-                    view.loadCartBtn(price2);
+                    view.loadCartBtn(price2, view);
                     this.load_total();
                     this.load_proceed();
                 });
                 bill_increase_item.addEventListener("click", () => {
-                    let price2 = getStorage("price2");
-                    let items2 = getStorage("items2");
+                    let price2 = model.getStorage("price2");
+                    let items2 = model.getStorage("items2");
                     items2[i].count += 1;
                     price2.mrp += items2[i].old_price;
                     price2.it++;
@@ -63,7 +63,7 @@ class Controller {
                     model.setStorage("price2", price2);
                     model.setStorage("items2", items2);
                     view.load_items_count(price2);
-                    view.loadCartBtn(price2);
+                    view.loadCartBtn(price2, view);
                     this.load_total();
                     this.load_proceed();
                 });
@@ -113,4 +113,7 @@ class Controller {
 
 let model = new Model();
 let view = new View();
-let control = new Controller();
+let control;
+setTimeout(() => {
+    control = new Controller();
+}, 10);
