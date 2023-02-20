@@ -11,72 +11,58 @@
 <body>
     <include class="navbar" src="/navbar.html"></include>
     <section class="bill">
-        <div class="heading">
-            <p>Place Order</p>
-        </div>
+        <header class="heading">Place Order</header>
         <div class="subheading">
             <h4>Delivery in 10 minutes</h4>
             <p>6 items</p>
         </div>
-        <div class="bill_container">
-            <div class="bill_item">
-                <img src="/images/vegetables/potato.avif" alt="error">
-                <div class="bill_item_detail">
-                    <div class="bill_item_name">
-                        <p>New Potato</p>
-                    </div>
-                    <div class="bill_item_weight">
-                        <p>1 kg</p>
-                    </div>
-                    <div class="bill_item_price">
+        <div class="billContainer">
+            <div class="billItem">
+                <img src="/images/vegetables/potato.avif" alt="item">
+                <div class="billItemDetail">
+                    <div class="billItemName">New Potato</div>
+                    <div class="billItemWeight">1 kg</div>
+                    <div class="billItemPrice">
                         <p>₹15</p>
                         <s>₹17</s>
                     </div>
                 </div>
-                <div class="bill_item_btn">
-                    <div class="decrease_item">-</div>
-                    <div class="item_value">2</div>
-                    <div class="increase_item">+</div>
+                <div class="billItemBtn">
+                    <button class="decreaseItem">-</button>
+                    <button class="itemValue">2</button>
+                    <button class="increaseItem">+</button>
                 </div>
             </div>
-            <div class="bill_item">
-                <img src="/images/vegetables/carrot.avif" alt="error">
-                <div class="bill_item_detail">
-                    <div class="bill_item_name">
-                        <p>Local Carrot</p>
-                    </div>
-                    <div class="bill_item_weight">
-                        <p>500 g</p>
-                    </div>
-                    <div class="bill_item_price">
+            <div class="billItem">
+                <img src="/images/vegetables/carrot.avif" alt="item">
+                <div class="billItemDetail">
+                    <div class="billItemName">Local Carrot</div>
+                    <div class="billItemWeight">500 g</div>
+                    <div class="billItemPrice">
                         <p>₹17</p>
                         <s>₹19</s>
                     </div>
                 </div>
-                <div class="bill_item_btn">
-                    <div class="decrease_item">-</div>
-                    <div class="item_value">1</div>
-                    <div class="increase_item">+</div>
+                <div class="billItemBtn">
+                    <button class="decreaseItem">-</button>
+                    <button class="itemValue">1</button>
+                    <button class="increaseItem">+</button>
                 </div>
             </div>
-            <div class="bill_item">
-                <img src="/images/vegetables/onion.avif" alt="error">
-                <div class="bill_item_detail">
-                    <div class="bill_item_name">
-                        <p>Onion</p>
-                    </div>
-                    <div class="bill_item_weight">
-                        <p>1 kg</p>
-                    </div>
-                    <div class="bill_item_price">
+            <div class="billItem">
+                <img src="/images/vegetables/onion.avif" alt="item">
+                <div class="billItemDetail">
+                    <div class="billItemName">Onion</p></div>
+                    <div class="billItemWeight">1 kg</div>
+                    <div class="billItemPrice">
                         <p>₹32</p>
                         <s>₹41</s>
                     </div>
                 </div>
-                <div class="bill_item_btn">
-                    <div class="decrease_item">-</div>
-                    <div class="item_value">1</div>
-                    <div class="increase_item">+</div>
+                <div class="billItemBtn">
+                    <button class="decreaseItem">-</button>
+                    <button class="itemValue">1</button>
+                    <button class="increaseItem">+</button>
                 </div>
             </div>
         </div>
@@ -85,37 +71,35 @@
                 <p>MRP</p>
                 <p>₹176</p>
             </div>
-            <div class="product_discount">
+            <div class="productDiscount">
                 <p>Product discount</p>
                 <p>-₹33</p>
             </div>
-            <div class="delivery_charge">
+            <div class="deliveryCharge">
                 <p>Delivery charge</p>
                 <div class="charge">
                     <s>₹15</s>
                     <p>FREE</p>
                 </div>
             </div>
-            <div class="grand_total">
+            <div class="grandTotal">
                 <p>Grand total</p>
                 <p>₹143</p>
             </div>
         </div>
     </section>
-    <section class="bill_total">
-        <div class="coupon">
-            <p>Coupons are only applicable on Blinkit app</p>
-        </div>
+    <section class="billTotal">
+        <div class="coupon">Coupons are only applicable on Blinkit app</div>
         <div class="proceed">
-            <div class="proceed_bar">
-                <div class="proceed_items">
+            <div class="proceedBar">
+                <div class="proceedItems">
                     <p>6</p>
                     <p>items</p>
                     <p>:</p>
                     <p>₹143</p>
                     <s>₹176</s>
                 </div>
-                <div class="proceed_btn">
+                <div class="proceedBtn">
                     <p>Proceed ></p>
                 </div>
             </div>

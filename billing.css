@@ -1,15 +1,16 @@
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 section.bill {
-    display: flexbox;
-    margin: 0% 22% 0.5% 22%;
+    /* margin: 0 20rem 1rem 20rem; */
+    width: 47rem;
+    margin: auto;
 }
-div.heading {
-    padding: 2% 0% 4% 0%;
+header.heading {
+    padding: 1rem 0 2rem 0;
     font-size: 1.5rem;
     font-weight: bold;
     color: gray;
@@ -20,66 +21,67 @@ div.subheading > h4 {
 div.subheading > p {
     font-size: 0.9rem;
     font-weight: lighter;
-    margin: 0.5% 0% 3% 0%;
+    margin: 0.3rem 0 1.5rem 0;
 }
 
-div.bill_item {
+div.billItem {
     display: flex;
-    padding-bottom: 5%;
+    padding-bottom: 2.7rem;
 }
-div.bill_item > img {
+div.billItem > img {
     height: 5rem;
-    border: 0.5px solid rgb(188, 187, 187);
-    border-radius: 5px;
-    margin-right: 2%;
+    border: 0.03125rem solid rgb(188, 187, 187);
+    border-radius: 0.3125rem;
+    margin-right: 1rem;
 }
-div.bill_item_detail {
-    width: 25%;
+div.billItemDetail {
+    width: 12.5rem;
 }
-div.bill_item_name {
+div.billItemName {
     font-size: 1.1rem;
-    margin: 2% 0%;
+    margin: 0.1rem 0;
 }
-div.bill_item_weight {
+div.billItemWeight {
     font-size: 0.9rem;
-    margin: 5% 0%;
+    margin: 0.6rem 0;
     color: gray;
 }
-div.bill_item_price {
+div.billItemPrice {
     display: flex;
 }
-div.bill_item_price > p {
-    padding-right: 4%;
+div.billItemPrice > p {
+    padding-right: 0.4rem;
     font-weight: bold;
 }
-div.bill_item_price > s {
+div.billItemPrice > s {
     font-size: 0.9rem;
     color: gray;
     align-items: center;
 }
-div.bill_item_btn {
+div.billItemBtn {
     display: flex;
     margin-left: auto;
-    margin-right: 0%;
-    color: white;
-    width: 10%;
+    margin-right: 0;
+    width: 5rem;
     align-items: center;
 }
-div.bill_item_btn > div {
-    margin: 2% 0%;
+div.billItemBtn > button {
+    border: none;
+    color: white;
     background-color: green;
-    width: 100%;
+    width: 5rem;
     height: 2rem;
+    font-size: 1.05rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-div.bill_item_btn > div:nth-child(1) {
-    border-radius: 20% 0% 0% 20%;
+div.billItemBtn > button:nth-child(1) {
+    border-radius: 0.4rem 0 0 0.4rem;
     cursor: pointer;
 }
-div.bill_item_btn > div:nth-child(3) {
-    border-radius: 0% 20% 20% 0%;
+div.billItemBtn > button:nth-child(3) {
+    border-radius: 0 0.4rem 0.4rem 0;
     cursor: pointer;
 }
 
@@ -87,10 +89,10 @@ div.total > div {
     display: flex;
     justify-content: space-between;
     color: gray;
-    padding: 0.5% 0%;
+    padding: 0.25rem 0;
     font-size: 0.9rem;
 }
-div.product_discount > p:last-child, div.charge > p {
+div.productDiscount > p:last-child, div.charge > p {
     color: green;
 }
 div.charge {
@@ -98,49 +100,50 @@ div.charge {
     justify-content: right;
 }
 div.charge > s {
-    padding-right: 8%;
+    padding-right: 0.3rem;
 }
-div.grand_total > p {
+div.grandTotal > p {
     font-weight: bold;
     font-size: 1.05rem;
     color: black;
-    padding: 1% 0% 0% 0%;
+    padding: 0.2rem 0;
 }
 
-section.bill_total {
+section.billTotal {
     display: flexbox;
-    margin: 0% 21% 3% 21%;
+    width: 47rem;
+    margin: auto;
 }
 div.coupon {
-    padding: 1% 0% 1% 1.5%;
+    padding: 0.4rem 0 0.4rem 0.9rem;
     font-size: 0.9rem;
     color: gray;
     background-color: rgb(249, 248, 248);
-    border-radius: 5px;
+    border-radius: 0.4rem;
 }
 
 div.proceed {
-    margin: 2% 0%;
+    margin: 1rem 0;
     background-color: rgb(249, 248, 248);
-    padding: 1% 1.5%;
-    border-radius: 5px;
+    padding: 0.6rem 0.9rem;
+    border-radius: 0.4rem;
 }
-div.proceed_bar {
+div.proceedBar {
     display: flex;
     justify-content: space-between;
     background-color: green;
     border-radius: 5px;
-    padding: 1% 1.5%;
+    padding: 0.6rem 0.9rem;
     color: white;
 }
-div.proceed_items {
+div.proceedItems {
     display: flex;
 }
-div.proceed_items > p {
-    margin: 0% 3%;
+div.proceedItems > p {
+    margin: 0 0.2rem;
     font-weight: bold;
 }
-div.proceed_btn {
+div.proceedBtn {
     font-weight: bold;
     cursor: pointer;
 }

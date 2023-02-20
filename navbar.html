@@ -9,10 +9,8 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo">
-            <img src="images/logo.webp" alt="error">
-        </div>
+    <header class="navbar">
+        <img id="logo" name="logo" src="images/logo.webp" alt="error">
         <div class="location">
             <h1>Delivery in 10 minutes</h1>
             <select name="location">
@@ -21,20 +19,13 @@
                 <option value="bom">Bombay, India</option>
             </select>
         </div>
-        <div class="search">
-            <input type="text" placeholder="search">
-        </div>
-        <div class="login">
-            <a href="">Login</a>
-        </div>
-        <div class="cart">
-            <button class="cart_btn">
-                <!-- <i class='fas fa-shopping-cart'></i> -->
-                <img src="/images/shopping-cart.png" alt="error">
-                <p>My Cart</p>
-            </button>
-        </div>
-    </div>
+        <input id="search" type="text" placeholder="search">
+        <a id="login" href="">Login</a>
+        <button class="cartBtn">
+            <img name="cart" id="cartImg" src="/images/shopping-cart.png" alt="error">
+            <p class="cartBtnTxt">My Cart</p>
+        </button>
+    </header>
     <div class="list">
         <p>Vegetables & Fruits</p>
         <p>Dairy & Breakfast</p>
