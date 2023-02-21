@@ -11,11 +11,16 @@ export class View {
         this.iframe = document.getElementsByTagName("iframe")[0];
         this.cart_btn_id = this.iframe.contentDocument.getElementById("cart_btn_id");
         this.cart_btn_text = this.iframe.contentDocument.getElementsByClassName("cart_btn_text")[0];
+        this.searchBar = this.iframe.contentDocument.getElementById("searchBar");
+        this.sort = document.getElementById("sortby");
     }
-    loadItems(item, flag) {
+    getItem(j) {
+        return document.getElementById(`item${j}`);
+    }
+    loadItems(item, flag, j) {
         if (flag) {
             this.element = `
-                <div class="item">
+                <div class="item" id="item${j}">
                     <div class="discount">
                         <p>${item.discount}</p>
                     </div>
@@ -43,7 +48,7 @@ export class View {
             `;
         } else {
             this.element = `
-                <div class="item">
+                <div class="item" id="item${j}">
                     <div class="discount">
                         <p>${item.discount}</p>
                     </div>

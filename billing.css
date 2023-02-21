@@ -14,13 +14,17 @@ div.heading {
     font-weight: bold;
     color: gray;
 }
-div.subheading > h4 {
+div.subheading {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5% 0% 3% 0%;
+}
+div.delivery > h4 {
     font-size: 1rem;
 }
-div.subheading > p {
+div.delivery > p {
     font-size: 0.9rem;
     font-weight: lighter;
-    margin: 0.5% 0% 3% 0%;
 }
 
 div.bill_item {
@@ -57,12 +61,38 @@ div.bill_item_price > s {
     color: gray;
     align-items: center;
 }
-div.bill_item_btn {
+div.cart_btns {
     display: flex;
     margin-left: auto;
     margin-right: 0%;
+    width: 22%;
+    align-items: center;
+}
+button.dlt_btn, button#clearCart {
+    width: fit-content;
+    height: 2rem;
+    width: 41%;
     color: white;
-    width: 10%;
+    border-radius: 0.4rem;
+    border: 0;
+    background-color: rgb(210, 37, 37);
+    cursor: pointer;
+}
+button#clearCart {
+    background-color: rgb(77, 170, 223);
+    width: 9%;
+}
+button#clearCart:hover {
+    background-color: rgb(52, 118, 157);
+}
+button.dlt_btn:hover {
+    background-color: rgb(158, 27, 27);
+}
+div.bill_item_btn {
+    display: flex;
+    color: white;
+    margin-right: 20%;
+    width: 41%;
     align-items: center;
 }
 div.bill_item_btn > div {
@@ -75,11 +105,11 @@ div.bill_item_btn > div {
     justify-content: center;
 }
 div.bill_item_btn > div:nth-child(1) {
-    border-radius: 20% 0% 0% 20%;
+    border-radius: 0.4rem 0 0 0.4rem;
     cursor: pointer;
 }
 div.bill_item_btn > div:nth-child(3) {
-    border-radius: 0% 20% 20% 0%;
+    border-radius: 0 0.4rem 0.4rem 0;
     cursor: pointer;
 }
 

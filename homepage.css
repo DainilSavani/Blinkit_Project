@@ -70,11 +70,10 @@ div.sort {
 }
 div.sort > p {
     font-size: 0.8rem;
-
 }
 div.sort > select {
     width: 60%;
-    padding: 2%;
+    padding: 1%;
     margin: 5%;
     height: 1.7rem;
     color: green;
@@ -191,10 +190,10 @@ div.add_item_btn > div:nth-child(3) {
 }
 
 iframe {
+    display: block;
     width: 100%;
-    margin: 0%;
-    padding: 0%;
-    border: none;
+    height: 8.96rem;
+    border: 0;
 }
 iframe.services {
     height: 29rem;

@@ -1,7 +1,7 @@
 export class View {
     constructor() {
         this.element, this.iframe, this.logo, this.cart_btn_text;
-        this.subheading = document.getElementsByClassName("subheading")[0];
+        this.delivery = document.getElementsByClassName("delivery")[0];
         this.container = document.getElementsByClassName("bill_container")[0];
         this.proceed = document.getElementsByClassName("proceed_bar")[0];
         this.bill = document.getElementsByClassName("total")[0];
@@ -32,10 +32,13 @@ export class View {
                             <s>₹${item.old_price}</s>
                         </div>
                     </div>
-                    <div class="bill_item_btn">
-                        <div class="bill_decrease_item" id="bill-btn${i}">-</div>
-                        <div class="bill_item_value" id="bill=value${i}">${item.count}</div>
-                        <div class="bill_increase_item" id="bill+btn${i}">+</div>
+                    <div class="cart_btns">
+                        <div class="bill_item_btn">
+                            <div class="bill_decrease_item" id="bill-btn${i}">-</div>
+                            <div class="bill_item_value" id="bill=value${i}">${item.count}</div>
+                            <div class="bill_increase_item" id="bill+btn${i}">+</div>
+                        </div>
+                        <button class="dlt_btn" id="dlt_btn${i}">Remove</button>
                     </div>
                 </div>
             `;
@@ -55,10 +58,13 @@ export class View {
                             <s>₹${item.old_price}</s>
                         </div>
                     </div>
-                    <div class="bill_item_btn">
-                    <div class="bill_decrease_item" id="bill-btn${i}">-</div>
-                    <div class="bill_item_value" id="bill=value${i}">${item.count}</div>
-                    <div class="bill_increase_item" id="bill+btn${i}">+</div>
+                    <div class="cart_btns">
+                        <div class="bill_item_btn">
+                            <div class="bill_decrease_item" id="bill-btn${i}">-</div>
+                            <div class="bill_item_value" id="bill=value${i}">${item.count}</div>
+                            <div class="bill_increase_item" id="bill+btn${i}">+</div>
+                        </div>
+                        <button class="dlt_btn" id="dlt_btn${i}">Remove</button>
                     </div>
                 </div>
             `;
@@ -76,7 +82,7 @@ export class View {
         }
     }
     load_items_count(price2) {
-        this.subheading.innerHTML = `
+        this.delivery.innerHTML = `
             <h4>Delivery in 10 minutes</h4>
             <p>${price2.it} items</p>
         `;

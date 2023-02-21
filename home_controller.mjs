@@ -9,7 +9,7 @@ class Controller {
     }
     loadProduct() {
         for (let i=0; i<model.items.length; i++) {
-            view.product_container.innerHTML += view.loadItems(model.items[i], model.items[i].weight>=1);
+            view.product_container.innerHTML += view.loadItems(model.items[i], model.items[i].weight>=1, i);
         }
     }
     load_add_or_item_btn() {
@@ -20,6 +20,33 @@ class Controller {
                 view.load_item_btn(i);
             }
         }
+    }
+    load_search_item() {
+        view.searchBar.addEventListener("keyup", () => {
+            const value = view.searchBar.value;
+            for (let i=0; i<model.no_of_items; i++) {
+                const name = model.items[i].name;
+                const item = view.getItem(i);
+                if (name.toLowerCase().includes(value.toLowerCase())) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            }
+        });
+    }
+    filter() {
+        view.sort.addEventListener("change", () => {
+            const value = view.sort.value;
+            for (let i=0; i<model.no_of_items; i++) {
+                const item = view.getItem(i);
+                if (model.items[i].type==value || value=="all") {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            }
+        });
     }
     setAction() {
         for (let i = 0; i < model.no_of_items; i++) {
@@ -105,7 +132,6 @@ let promise = fetch('./items.json');
 promise.then((resolve) => {
     return resolve.json();
 }).then((data) => {
-    console.log(data);
     model = new Model(data);
     return model;
 }).then((model) => {
@@ -113,10 +139,10 @@ promise.then((resolve) => {
     view = new View(model.no_of_items);
     return view;
 }).then((view) => {
-    return view
-}).then((view) => {
     control = new Controller();
     control.load_add_or_item_btn();
     control.setAction();
     control.cartBtnAction();
+    control.load_search_item();
+    control.filter();
 });

@@ -7,7 +7,8 @@
         "count" : 0,
         "weight": 1,
         "new_price": 15,
-        "old_price": 17
+        "old_price": 17,
+        "type": "veg"
     },
     {
         "name": "Onion",
@@ -17,7 +18,8 @@
         "count" : 0,
         "weight": 1,
         "new_price": 32,
-        "old_price": 41
+        "old_price": 41,
+        "type": "veg"
     },
     {
         "name": "Local Carrot",
@@ -27,7 +29,8 @@
         "count" : 0,
         "weight": 0.5,
         "new_price": 17,
-        "old_price": 19
+        "old_price": 19,
+        "type": "veg"
     },
     {
         "name": "Green Chilli",
@@ -37,7 +40,8 @@
         "count" : 0,
         "weight": 0.1,
         "new_price": 10,
-        "old_price": 12
+        "old_price": 12,
+        "type": "veg"
     },
     {
         "name": "Hybrid Tomato",
@@ -47,7 +51,8 @@
         "count" : 0,
         "weight": 0.5,
         "new_price": 15,
-        "old_price": 19
+        "old_price": 19,
+        "type": "veg"
     },
     {
         "name": "Cauliflower",
@@ -57,7 +62,8 @@
         "count" : 0,
         "weight": 0.5,
         "new_price": 23,
-        "old_price": 28
+        "old_price": 28,
+        "type": "veg"
     },
     {
         "name": "Desi Tomato",
@@ -67,7 +73,8 @@
         "count" : 0,
         "weight": 0.5,
         "new_price": 20,
-        "old_price": 24
+        "old_price": 24,
+        "type": "veg"
     },
     {
         "name": "Ginger",
@@ -77,7 +84,8 @@
         "count" : 0,
         "weight": 0.25,
         "new_price": 37,
-        "old_price": 47
+        "old_price": 47,
+        "type": "veg"
     },
     {
         "name": "Sweet Potato",
@@ -87,7 +95,8 @@
         "count" : 0,
         "weight": 0.6,
         "new_price": 55,
-        "old_price": 60
+        "old_price": 60,
+        "type": "veg"
     },
     {
         "name": "Bitter Gourd",
@@ -97,6 +106,29 @@
         "count" : 0,
         "weight": 0.25,
         "new_price": 29,
-        "old_price": 34
+        "old_price": 34,
+        "type": "veg"
+    }, 
+    {
+        "name": "Chicken",
+        "src": "/images/vegetables/chicken.avif",
+        "discount": "20% OFF",
+        "sourced": "Sourced at 5 AM",
+        "count" : 0,
+        "weight": 0.45,
+        "new_price": 168,
+        "old_price": 210,
+        "type": "non-veg"
+    }, 
+    {
+        "name": "Eggs",
+        "src": "/images/vegetables/egg.avif",
+        "discount": "27% OFF",
+        "sourced": "Sourced at 5 AM",
+        "count" : 0,
+        "weight": 0.36,
+        "new_price": 69,
+        "old_price": 95,
+        "type": "non-veg"
     }
 ]
