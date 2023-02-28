@@ -1,0 +1,31 @@
+@import '../../../../mixin';
+
+
+header.productHead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include border();
+    h2 {
+        font-size: 0.9rem;
+        padding-left: 1rem;
+    }
+    div.sort {
+        display: flex;
+        width: 18rem;
+        align-items: center;
+
+        p {
+            font-size: 0.8rem;
+        }
+    }
+    div.sort > select {
+        width: 10.5rem;
+        padding: 0 0.3rem;
+        margin: 0.9rem;
+        height: 1.7rem;
+        color: green;
+        @include border;
+        border-radius: $borderValue*10;
+    }
+}

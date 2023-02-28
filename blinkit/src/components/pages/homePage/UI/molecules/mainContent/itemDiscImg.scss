@@ -1,0 +1,23 @@
+@import '../../../../mixin';
+
+button.discount {
+    color: white;
+    border: none;
+    font-size: 0.8rem;
+    padding: 0.3rem;
+    margin: 0.2rem;
+    border-radius: $borderValue*10;
+    background-color: rgb(78, 114, 233);
+    cursor: pointer;
+}
+
+div.itemImgDiv {
+    display: flex;
+    justify-content: center;
+
+    img.itemImg {
+        height: 8rem;
+        display: flex;
+        justify-content: center;
+    }
+}
