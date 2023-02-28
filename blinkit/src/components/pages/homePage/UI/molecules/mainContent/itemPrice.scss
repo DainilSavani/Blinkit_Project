@@ -1,0 +1,56 @@
+@import '../../../../mixin';
+
+div.price {
+    padding: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div.value {
+        text-align: center;
+        p {
+            font-size: 1rem;
+            margin: 0;
+        }
+        s {
+            font-size: 0.8rem;
+            color: gray;
+        }
+    }
+}
+
+button.addBtn {
+    width: 5.3rem;
+    font-size: 1rem;
+    color: green;
+    background-color: rgb(214, 246, 231);
+    @include border(0.03125rem, green);
+    border-radius: $borderValue*10;
+    height: 2rem;
+    cursor: pointer;
+}
+div.billItemBtn {
+    display: flex;
+    margin-left: auto;
+    margin-right: 0;
+    width: 5rem;
+    align-items: center;
+    button {
+        border: none;
+        color: white;
+        background-color: green;
+        width: 5rem;
+        height: 2rem;
+        font-size: 1.05rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    button:nth-child(1) {
+        border-radius: 0.4rem 0 0 0.4rem;
+        cursor: pointer;
+    }
+    button:nth-child(3) {
+        border-radius: 0 0.4rem 0.4rem 0;
+        cursor: pointer;
+    }
+}
