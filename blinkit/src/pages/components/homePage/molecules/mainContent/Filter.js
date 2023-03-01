@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FILTER_TYPES } from '../../../../../../data/constData';
+import { FILTER_TYPES } from '../../../../../data/constData';
 
 class Filter extends Component {
 

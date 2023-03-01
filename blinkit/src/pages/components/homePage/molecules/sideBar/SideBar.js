@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { SIDEBAR_CATEGORIES } from '../../../../../../data/constData';
+import { SIDEBAR_CATEGORIES } from '../../../../../data/constData';
 import SideBarItem from '../../atoms/sideBar/SideBarItem';
 import './sideBar.scss';
 
