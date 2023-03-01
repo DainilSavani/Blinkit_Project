@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { OUR_SERVICES_DATA } from '../../../../../../data/constData';
+import { OUR_SERVICES_DATA } from '../../../../../data/constData';
 import ServiceBox from '../../atoms/services/ServiceBox';
 import './ourServices.scss'
 

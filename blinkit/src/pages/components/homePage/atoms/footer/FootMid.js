@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { DOWNLOAD_APP_BUTTONS } from '../../../../../../data/constData';
+import { DOWNLOAD_APP_BUTTONS } from '../../../../../data/constData';
 
 class FootMid extends Component {
     

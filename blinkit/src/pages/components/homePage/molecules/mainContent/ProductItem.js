@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ItemImage from '../../atoms/mainContent/ItemImage'
 import ItemSourcedTime from '../../atoms/mainContent/ItemSourcedTime';
-import ItemPrice from '../../molecules/mainContent/ItemPrice';
+import ItemPrice from './ItemPrice';
 import './productItem.scss';
 
 class ProductItem extends Component {

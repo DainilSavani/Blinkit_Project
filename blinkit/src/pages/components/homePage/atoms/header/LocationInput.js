@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { LOCATION } from '../../../../../../data/constData';
-
+import { LOCATION } from '../../../../../data/constData';
 class LocationInput extends Component {
 
     loadLocations = () => LOCATION.map(location => <option key={location.value} value={location.value}>{location.name}</option>)
