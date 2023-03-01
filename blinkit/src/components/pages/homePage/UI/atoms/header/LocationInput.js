@@ -1,32 +1,15 @@
 import React, { Component } from 'react';
-import Option from '../Option';
+import { LOCATION } from '../../../../../../data/constData';
 
 class LocationInput extends Component {
 
-    constructor(props) {
-        super(props)
-        this.inputRef = React.createRef();
-        this.optionValues = [
-            {
-                name: "Bangaluru, India",
-                value: "ban"
-            }, {
-                name: "Delhi, India",
-                value: "del"
-            }, {
-                name: "Bombay, India",
-                value: "bom"
-            }
-        ]
-    }
-
+    loadLocations = () => LOCATION.map(location => <option key={location.value} value={location.value}>{location.name}</option>)
+    
     render() {
         const {changeInput} = this.props;
         return (
-            <select name='location' ref={this.inputRef} onChange={() => changeInput()}>
-                {
-                    this.optionValues.map(item => <Option key={item.value} item={item}/>)
-                }
+            <select className='locationInput' name='locationInput' onChange={(event) => changeInput(event.target.value)}>
+                {this.loadLocations()}
             </select>
         )
     }

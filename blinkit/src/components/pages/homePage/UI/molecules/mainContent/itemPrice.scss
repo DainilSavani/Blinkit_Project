@@ -1,10 +1,9 @@
 @import '../../../../mixin';
 
 div.price {
+    @include flexDisplay(space-between);
     padding: 0.8rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    
     div.value {
         text-align: center;
         p {
@@ -19,7 +18,7 @@ div.price {
 }
 
 button.addBtn {
-    width: 5.3rem;
+    width: 5rem;
     font-size: 1rem;
     color: green;
     background-color: rgb(214, 246, 231);
@@ -29,28 +28,27 @@ button.addBtn {
     cursor: pointer;
 }
 div.billItemBtn {
-    display: flex;
+    @include flexDisplay();
     margin-left: auto;
     margin-right: 0;
     width: 5rem;
-    align-items: center;
-    button {
+    div, button {
         border: none;
         color: white;
         background-color: green;
         width: 5rem;
         height: 2rem;
         font-size: 1.05rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    button:nth-child(1) {
-        border-radius: 0.4rem 0 0 0.4rem;
-        cursor: pointer;
-    }
-    button:nth-child(3) {
-        border-radius: 0 0.4rem 0.4rem 0;
-        cursor: pointer;
+        @include flexDisplay();
+
+        &:nth-child(1) {
+            border-radius: 0.4rem 0 0 0.4rem;
+            cursor: pointer;
+        }
+
+        &:nth-child(3) {
+            border-radius: 0 0.4rem 0.4rem 0;
+            cursor: pointer;
+        }
     }
 }

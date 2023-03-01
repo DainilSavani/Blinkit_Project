@@ -1,0 +1,18 @@
+import React, { Component } from 'react';
+import { DOWNLOAD_APP_BUTTONS } from '../../../../../../data/constData';
+
+class FootMid extends Component {
+    
+    loadFooterButtons = () => DOWNLOAD_APP_BUTTONS.map((btns, index) => <img key={index} src={btns.src} alt={btns.alt} />)
+
+    render() {
+        return (
+            <div className="footMiddle">
+                <p>Download App</p>
+                {this.loadFooterButtons()}
+            </div>
+        )
+    }
+}
+
+export default FootMid;
