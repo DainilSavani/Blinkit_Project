@@ -1,11 +1,9 @@
-import HomePage from "./components/pages/HomePage";
-// import BillingPage from "./components/pages/BillingPage";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
     <div className="App">
       <HomePage />
-      {/* <BillingPage /> */}
     </div>  
   );
 }

@@ -1,12 +1,12 @@
-import React, { Component, ReactDOM } from 'react';
-import vegetableData from '../../data/vegetablesData.json';
-import { searchVegetable, filterHandler, addToCartHandler, removeFromCartHandler } from '../../helperFunction/stateChangeFunctions';
-import { FILTER_TYPES, CART_STATUS } from '../../data/constData';
-import Navbar from './homePage/UI/organisms/header/Navbar';
-import SubHeaderCategories from './homePage/UI/molecules/header/SubHeaderCategories';
-import MainProductSection from './homePage/UI/organisms/mainContent/MainProductSection';
-import OurServices from './homePage/UI/molecules/service/OurServices';
-import Foot from './homePage/UI/molecules/footer/Foot';
+import React, { Component } from 'react';
+import vegetableData from '../data/vegetablesData.json';
+import { searchVegetable, filterHandler, addToCartHandler, removeFromCartHandler } from '../helperFunction/stateChangeFunctions';
+import {FILTER_TYPES, CART_STATUS} from '../data/constData';
+import Navbar from './components/homePage/organisms/header/Navbar';
+import SubHeaderCategories from './components/homePage/molecules/header/SubHeaderCategories';
+import MainProductSection from './components/homePage/organisms/mainContent/MainProductSection';
+import OurServices from './components/homePage/molecules/service/OurServices';
+import Foot from './components/homePage/molecules/footer/Foot';
 
 export class HomePage extends Component {
     constructor(props) {

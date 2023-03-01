@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { LOCATION } from '../../../../../../data/constData';
-import { changeInputLocation } from '../../../../../../helperFunction/stateChangeFunctions';
+import { LOCATION } from '../../../../../data/constData';
+import { changeInputLocation } from '../../../../../helperFunction/stateChangeFunctions';
 import LocationInput from '../../atoms/header/LocationInput';
 import './location.scss';
 
