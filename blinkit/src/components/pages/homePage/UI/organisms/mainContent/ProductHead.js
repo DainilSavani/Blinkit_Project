@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import Heading from '../../atoms/mainContent/Heading';
 import Filter from '../../molecules/mainContent/Filter';
 import './productHead.scss';
 
 class ProductHead extends Component {
     render() {
+        const {filterHandler} = this.props;
         return (
             <header className='productHead'>
-                <Heading />
-                <Filter />
+                <h2>Buy Fresh Vegetables Online</h2>
+                <Filter filterHandler={filterHandler} />
             </header>
         )
     }
