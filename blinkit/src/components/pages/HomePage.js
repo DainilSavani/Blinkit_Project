@@ -1,86 +1,42 @@
 import React, { Component, ReactDOM } from 'react';
-import data from './items.json';
-import HeaderTemplate from './homePage/templates/HeaderTemplate';
-import MainContent from './homePage/templates/MainContent';
-import ServiceTempplate from './homePage/templates/ServiceTemplate';
-import Foot from './homePage/UI/organisms/Foot';
-import { ValueProvider } from './homePage/Context';
+import vegetableData from '../../data/vegetablesData.json';
+import { searchVegetable, filterHandler, addToCartHandler, removeFromCartHandler } from '../../helperFunction/stateChangeFunctions';
+import { FILTER_TYPES, CART_STATUS } from '../../data/constData';
+import Navbar from './homePage/UI/organisms/header/Navbar';
+import SubHeaderCategories from './homePage/UI/molecules/header/SubHeaderCategories';
+import MainProductSection from './homePage/UI/organisms/mainContent/MainProductSection';
+import OurServices from './homePage/UI/molecules/service/OurServices';
+import Foot from './homePage/UI/molecules/footer/Foot';
 
 export class HomePage extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            items: data,
-            cart: {
-                count: 0,
-                mrp: 0,
-                total: 0
-            },
-            search: "",
-            type: "all"
+            vegetableData: vegetableData,
+            cartStatus: CART_STATUS,
+            searchBarValue: "",
+            filterType: FILTER_TYPES[0].value
         }
+        this.searchVegetable = searchVegetable.bind(this);
+        this.filterHandler = filterHandler.bind(this);
+        this.addToCartHandler = addToCartHandler.bind(this);
+        this.removeFromCartHandler = removeFromCartHandler.bind(this);
     }
-    addItem = (i) => {
-        this.setState(prevState => ({
-            items: [
-                ...prevState.items.slice(0, i),
-                Object.assign({}, prevState.items[i], {count: prevState.items[i].count+1}),
-                ...prevState.items.slice(i+1)
-            ],
-            cart: {
-                count: prevState.cart.count+1,
-                mrp: prevState.cart.mrp + prevState.items[i].old_price,
-                total: prevState.cart.total + prevState.items[i].new_price
-            }
-        }));
-    }
-    decreaseItem = (i) => {
-        this.setState(prevState => ({
-            items: [
-                ...prevState.items.slice(0, i),
-                Object.assign({}, prevState.items[i], {count: prevState.items[i].count-1}),
-                ...prevState.items.slice(i+1)
-            ],
-            cart: {
-                count: prevState.cart.count-1,
-                mrp: prevState.cart.mrp - prevState.items[i].old_price,
-                total: prevState.cart.total - prevState.items[i].new_price
-            }
-        }));
-    }
-    searchItem = (value) => {
-        this.setState({
-            search: value
-        }, () => {
-            console.log(this.state.search);
-        });
-    }
-    sortType = (value) => {
-        this.setState({
-            type: value
-        }, () => {
-            console.log(this.state.type);
-        })
-    }
+    
+    
     render() {
         return (
             <>
-                <ValueProvider value={
-                    {
-                        items: this.state.items,
-                        cart: this.state.cart,
-                        addItem: this.addItem,
-                        decreaseItem: this.decreaseItem,
-                        search: this.state.search,
-                        searchItem: this.searchItem,
-                        type: this.state.type,
-                        sortType: this.sortType
-                    }
-                }>
-                    <HeaderTemplate />
-                    <MainContent />
-                </ValueProvider>
-                <ServiceTempplate />
+                <Navbar searchVegetable={this.searchVegetable} cartStatus={this.state.cartStatus} />
+                <SubHeaderCategories />
+                <MainProductSection
+                    filterHandler={this.filterHandler}
+                    vegetableItems={this.state.vegetableData}
+                    searchBarValue={this.state.searchBarValue}
+                    filterType={this.state.filterType}
+                    addToCartHandler={this.addToCartHandler}
+                    removeFromCartHandler={this.removeFromCartHandler} />
+                <OurServices />
                 <Foot />
             </>
         )

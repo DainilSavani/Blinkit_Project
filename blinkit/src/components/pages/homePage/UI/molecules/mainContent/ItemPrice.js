@@ -1,27 +1,26 @@
 import React, { Component } from 'react';
 import ItemPriceValue from '../../atoms/mainContent/ItemPriceValue';
-import Button from '../../atoms/Button';
-import { ValueConsumer } from '../../../Context';
 import './itemPrice.scss';
 
 class ItemPrice extends Component {
+
+    loadItemButtons = ({vegetableItem, itemIndex, addToCartHandler, removeFromCartHandler}) => {
+        if (vegetableItem.count === 0)
+            return <button className='addBtn' onClick={()=>addToCartHandler(itemIndex)}>ADD</button>
+        else
+            return <div className="billItemBtn">
+                <button className='decreaseItem' onClick={()=>removeFromCartHandler(itemIndex)}>-</button>
+                <div className='itemValue'>{vegetableItem.count}</div>
+                <button className='increaseItem' onClick={()=>addToCartHandler(itemIndex)}>+</button>
+            </div>
+
+    }
     render() {
-        const {item, index} = this.props;
+        const { vegetableItem } = this.props;
         return (
             <div className="price">
-                <ItemPriceValue newPrice={item.new_price} oldPrice={item.old_price} />
-                <ValueConsumer >
-                    {value => {
-                        if (item.count === 0)
-                            return <Button clsName='addBtn' value={value} index={index} isIncrease={true}>ADD</Button>
-                        else
-                            return <div className="billItemBtn">
-                                <Button clsName='decreaseItem' value={value} index={index} isIncrease={false}>-</Button>
-                                <Button clsName='itemValue'>{item.count}</Button>
-                                <Button clsName='increaseItem' value={value} index={index} isIncrease={true}>+</Button>
-                            </div>
-                    }}
-                </ValueConsumer>
+                <ItemPriceValue price={vegetableItem.price} mrp={vegetableItem.MRP} />
+                {this.loadItemButtons(this.props)}
             </div>
         )
     }

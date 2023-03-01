@@ -2,30 +2,27 @@
 
 
 header.productHead {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flexDisplay(space-between);
     @include border();
     h2 {
         font-size: 0.9rem;
         padding-left: 1rem;
     }
-    div.sort {
+    div.filter {
         display: flex;
         width: 18rem;
         align-items: center;
+        font-size: 0.9rem;
+        color: rgb(99, 99, 99);
 
-        p {
-            font-size: 0.8rem;
+        select#filterBar {
+            width: 10.5rem;
+            padding: 0 0.3rem;
+            margin: 0.9rem;
+            height: 1.7rem;
+            color: green;
+            @include border;
+            border-radius: $borderValue*10;
         }
-    }
-    div.sort > select {
-        width: 10.5rem;
-        padding: 0 0.3rem;
-        margin: 0.9rem;
-        height: 1.7rem;
-        color: green;
-        @include border;
-        border-radius: $borderValue*10;
     }
 }
