@@ -1,0 +1,134 @@
+[
+    {
+        "name": "New Potato",
+        "src": "/images/vegetables/potato.avif",
+        "discount": "18% OFF",
+        "sourced": "Sourced at 5 AM",
+        "count" : 0,
+        "weight": 1,
+        "price": 15,
+        "MRP": 17,
+        "type": "veg"
+    },
+    {
+        "name": "Onion",
+        "src": "/images/vegetables/onion.avif",
+        "discount": "21% OFF",
+        "sourced": "Sourced at 5 AM",
+        "count" : 0,
+        "weight": 1,
+        "price": 32,
+        "MRP": 41,
+        "type": "veg"
+    },
+    {
+        "name": "Local Carrot",
+        "src": "/images/vegetables/carrot.avif",
+        "discount": "10% OFF",
+        "sourced": "Sourced at 5 AM",
+        "count" : 0,
+        "weight": 0.5,
+        "price": 17,
+        "MRP": 19,
+        "type": "veg"
+    },
+    {
+        "name": "Green Chilli",
+        "src": "/images/vegetables/chilli.avif",
+        "discount": "16% OFF",
+        "sourced": "Sourced at 5 AM",
+        "count" : 0,
+        "weight": 0.1,
+        "price": 10,
+        "MRP": 12,
+        "type": "veg"
+    },
+    {
+        "name": "Hybrid Tomato",
+        "src": "/images/vegetables/hybrid_tomato.avif",
+        "discount": "23% OFF",
+        "sourced": "Sourced at 5 AM",
+        "count" : 0,
+        "weight": 0.5,
+        "price": 15,
+        "MRP": 19,
+        "type": "veg"
+    },
+    {
+        "name": "Cauliflower",
+        "src": "/images/vegetables/cauliflower.avif",
+        "discount": "17% OFF",
+        "sourced": "Sourced at 5 AM",
+        "count" : 0,
+        "weight": 0.5,
+        "price": 23,
+        "MRP": 28,
+        "type": "veg"
+    },
+    {
+        "name": "Desi Tomato",
+        "src": "/images/vegetables/desi_tomato.avif",
+        "discount": "16% OFF",
+        "sourced": "Sourced at 5 AM",
+        "count" : 0,
+        "weight": 0.5,
+        "price": 20,
+        "MRP": 24,
+        "type": "veg"
+    },
+    {
+        "name": "Ginger",
+        "src": "/images/vegetables/ginger.avif",
+        "discount": "21% OFF",
+        "sourced": "Sourced at 5 AM",
+        "count" : 0,
+        "weight": 0.25,
+        "price": 37,
+        "MRP": 47,
+        "type": "veg"
+    },
+    {
+        "name": "Sweet Potato",
+        "src": "/images/vegetables/sweet_potato.avif",
+        "discount": "12% OFF",
+        "sourced": "Sourced at 5 AM",
+        "count" : 0,
+        "weight": 0.6,
+        "price": 55,
+        "MRP": 60,
+        "type": "veg"
+    },
+    {
+        "name": "Bitter Gourd",
+        "src": "/images/vegetables/bitter_gourd.avif",
+        "discount": "14% OFF",
+        "sourced": "Sourced at 5 AM",
+        "count" : 0,
+        "weight": 0.25,
+        "price": 29,
+        "MRP": 34,
+        "type": "veg"
+    }, 
+    {
+        "name": "Chicken",
+        "src": "/images/vegetables/chicken.avif",
+        "discount": "20% OFF",
+        "sourced": "Sourced at 5 AM",
+        "count" : 0,
+        "weight": 0.45,
+        "price": 168,
+        "MRP": 210,
+        "type": "non-veg"
+    }, 
+    {
+        "name": "Eggs",
+        "src": "/images/vegetables/egg.avif",
+        "discount": "27% OFF",
+        "sourced": "Sourced at 5 AM",
+        "count" : 0,
+        "weight": 0.36,
+        "price": 69,
+        "MRP": 95,
+        "type": "non-veg"
+    }
+]
