@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { OUR_SERVICES_DATA } from '../../../../../data/constData';
-import ServiceBox from '../atoms/services/ServiceBox';
+import ServiceBox from './atoms/ServiceBox';
 import './ourServices.scss'
 
 class OurServices extends PureComponent {
