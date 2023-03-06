@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
-import FootMid from '../../atoms/footer/FootMid';
-import FootRight from '../../atoms/footer/FootRight';
+import FootMid from './atoms/FootMid';
+import FootRight from './atoms/FootRight';
 import './foot.scss';
 
 class Foot extends PureComponent {

@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 
 //constants and helper functions fetching
 import VEGETABLE_ITEMS from '../data/vegetableData.json';
-import {CART_STATUS} from '../data/constData';
-import { searchVegetable, addItemsToCartHandler, decreaseItemsFromCartHandler, 
-         removeItemFromCartHandler, clearCartHandler } from '../helperFunction/stateChangeFunction';
+import { CART_STATUS } from '../data/constData';
+import { searchVegetable } from './components/billingPage/organisms/header/molecules/atoms/SearchBar';
+import { clearCartHandler } from './components/billingPage/organisms/main/molecules/atoms/BillSectionHeading';
+import { addItemsToCartHandler, decreaseItemsFromCartHandler, removeItemFromCartHandler } 
+        from './components/billingPage/organisms/main/molecules/atoms/billItemBtnsHelperFunction';
 
 //componenets fetching
 import Navbar from './components/billingPage/organisms/header/Navbar';
 import MainBillingSection from './components/billingPage/organisms/main/MainBillingSection';
-import SubHeaderCategories from './components/billingPage/molecules/header/SubHeaderCategories';
-import OurServices from './components/billingPage/molecules/service/OurServices';
+import OurServices from './components/billingPage/molecules/services/OurServices';
 import Foot from './components/billingPage/molecules/footer/Foot';
 
 class BillingPage extends Component {
@@ -32,14 +33,8 @@ class BillingPage extends Component {
     render() {
         return (
             <>
-                <Navbar searchVegetable={this.searchVegetable} cartStatus={this.state.cartStatus} />
-                <SubHeaderCategories />
-                <MainBillingSection
-                    {...this.state}
-                    addItemsToCartHandler={this.addItemsToCartHandler}
-                    decreaseItemsFromCartHandler={this.decreaseItemsFromCartHandler}
-                    removeItemFromCartHandler={this.removeItemFromCartHandler}
-                    clearCartHandler={this.clearCartHandler} />
+                <Navbar {...this}/>
+                <MainBillingSection {...this} />
                 <OurServices />
                 <Foot />
             </>
