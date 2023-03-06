@@ -59,6 +59,34 @@ export const MORE_SUB_HEADER_CATEGORIES = [{
     value: 8
 }];
 
+export const SIDEBAR_CATEGORIES = [
+    {
+        name: 'All',
+        src: './images/categories/all+fresh.webp',
+        alt: 'all'
+    }, {
+        name: 'Fresh Vegetables',
+        src: './images/categories/all+fresh.webp',
+        alt: 'fresh vegetables'
+    }, {
+        name: 'Exotics',
+        src: './images/categories/exotics.webp',
+        alt: 'exotics'
+    }, {
+        name: 'Seasonal',
+        src: './images/categories/seasonal.webp',
+        alt: 'seasonal'
+    }, {
+        name: 'Organic & Hydroponic',
+        src: './images/categories/organic.jpeg',
+        alt: 'organic'
+    }, {
+        name: 'Freshly Cut & Sprouts',
+        src: './images/categories/freshly cut.webp',
+        alt: 'freshly cut'
+    }
+]
+
 export const OUR_SERVICES_DATA = [
     {
         name: 'Superfast Delivery',
