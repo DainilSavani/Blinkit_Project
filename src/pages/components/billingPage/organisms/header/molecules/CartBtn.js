@@ -4,14 +4,13 @@ import './cartBtn.scss';
 
 class CartBtn extends Component {
     render() {
-        const {cartStatus} = this.props;
         return (
             <button className="cartBtn" >
-                <img name="cartImg" id="cartImg" src="/images/cart-image.png"/>
-                <CartText cartStatus={cartStatus}></CartText>
+                <img name="cartImg" id="cartImg" src="/images/cart-image.png" />
+                <CartText />
             </button>
         )
     }
 }
 
-export default CartBtn
+export default CartBtn;

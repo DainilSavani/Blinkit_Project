@@ -3,6 +3,7 @@ import OriginalAmount from './atoms/OriginalAmount';
 import DiscountAmount from './atoms/DiscountAmount';
 import DeliveryAmount from './atoms/DeliveryAmount';
 import GrandTotal from './atoms/GrandTotal';
+import { connect } from 'react-redux';
 import './billingAmount.scss';
 
 class BillingAmount extends Component {
@@ -19,4 +20,10 @@ class BillingAmount extends Component {
     }
 }
 
-export default BillingAmount
+const mapStateToProps = state => {
+    return {
+        cartStatus: state.cartStatus
+    }
+}
+
+export default connect(mapStateToProps)(BillingAmount);

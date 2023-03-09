@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class ProceedItems extends Component {
     render() {
@@ -15,4 +16,10 @@ class ProceedItems extends Component {
     }
 }
 
-export default ProceedItems
+const mapStateToProps = state => {
+    return {
+        cartStatus: state.cartStatus
+    }
+}
+
+export default connect(mapStateToProps)(ProceedItems);

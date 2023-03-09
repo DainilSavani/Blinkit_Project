@@ -1,17 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { clearCartHandler } from '../../../../../../../redux/actions';
 
-//for reseting products count on clear cart
-import VEGETABLE_ITEMS from '../../../../../../../data/vegetableData.json';
-import { CART_STATUS } from '../../../../../../../data/constData';
-
-export const clearCartHandler = function clearCartHandler() {
-    this.setState({
-        vegetableItems: [...VEGETABLE_ITEMS],
-        cartStatus: {...CART_STATUS}
-    });
-}
-
-export class BillSectionHeading extends Component {
+class BillSectionHeading extends Component {
     render() {
         const {cartItemsCount, clearCartHandler} = this.props;
         return (
@@ -28,3 +19,17 @@ export class BillSectionHeading extends Component {
         )
     }
 }
+
+const mapStateToProps = state => {
+    return {
+        cartItemsCount: state.cartStatus.itemsCount
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        clearCartHandler: () => dispatch(clearCartHandler())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(BillSectionHeading);

@@ -9,7 +9,7 @@ class ProceedPayment extends Component {
                 <div className="coupon">Coupons are only applicable on Blinkit app</div>
                 <div className='proceed'>
                     <div className='proceedBar'>
-                        <ProceedItems {...this.props} />
+                        <ProceedItems />
                         <div className="proceedBtn">
                             <p>Proceed {'>'}</p>
                         </div>
