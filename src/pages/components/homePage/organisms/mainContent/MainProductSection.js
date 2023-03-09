@@ -6,13 +6,12 @@ import './mainProductSection.scss';
 
 class MainProductSection extends Component {
     render() {
-        const {filterHandler} = this.props;
         return (
             <div className='content'>
                 <SideBar />
                 <div className='product'>
-                    <ProductHead filterHandler={filterHandler}/>
-                    <ProductItem {...this.props}/>
+                    <ProductHead />
+                    <ProductItem />
                 </div>
             </div>
         )

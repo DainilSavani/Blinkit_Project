@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { searchVegetable } from '../../../../../../../redux/actions';
 
-export const searchVegetable = function searchVegetable(value) {
-    this.setState({ searchBarValue: value });
-}
-
-export class SearchBar extends Component {
+class SearchBar extends Component {
 
     render() {
-        const { searchVegetable } = this.props;
+        const {searchVegetable} = this.props;
         return (
             <input id="searchBar" type="text" placeholder="search" autoComplete='off'
                 onKeyUp={(event) => searchVegetable(event.target.value)} />
         )
     }
 }
+
+const mapDispatchToProps = dispatch => {
+    return {
+        searchVegetable: (searchValue) => dispatch(searchVegetable(searchValue))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(SearchBar);

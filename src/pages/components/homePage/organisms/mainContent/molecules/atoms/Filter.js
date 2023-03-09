@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { FILTER_TYPES } from '../../../../../../../data/constData';
+import { filterHandler } from '../../../../../../../redux/actions';
+import { connect } from 'react-redux';
 
-export const filterHandler = function filterHandler(value){
-    this.setState({filterType: value}, ()=>{console.log(this.state.filterType)});
-}
-
-export class Filter extends Component {
+class Filter extends Component {
 
     loadFilterOptions = () => FILTER_TYPES.map((option, index) => <option key={index} value={option.value}>{option.name}</option>)
 
@@ -21,3 +19,11 @@ export class Filter extends Component {
         )
     }
 }
+
+const mapDispatchToprops = dispatch => {
+    return {
+        filterHandler: (filterType) => dispatch(filterHandler(filterType))
+    }
+}
+
+export default connect(null, mapDispatchToprops)(Filter);

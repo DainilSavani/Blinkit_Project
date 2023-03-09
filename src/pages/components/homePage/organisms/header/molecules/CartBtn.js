@@ -4,11 +4,10 @@ import './cartBtn.scss';
 
 class CartBtn extends Component {
     render() {
-        const {cartStatus} = this.props;
         return (
             <button className="cartBtn" >
                 <img name="cartImg" id="cartImg" src="/images/cart-image.png"/>
-                <CartText cartStatus={cartStatus}></CartText>
+                <CartText />
             </button>
         )
     }

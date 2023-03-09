@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Filter} from './atoms/Filter';
+import Filter from './atoms/Filter';
 import './productHead.scss';
 
 class ProductHead extends Component {
@@ -8,7 +8,7 @@ class ProductHead extends Component {
         return (
             <header className='productHead'>
                 <h2>Buy Fresh Vegetables Online</h2>
-                <Filter {...this.props} />
+                <Filter />
             </header>
         )
     }
