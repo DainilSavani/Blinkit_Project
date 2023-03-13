@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 
 export class BillItemDetail extends Component {
     render() {
-        const { billingItem } = this.props;
-        const billingItemWeight = billingItem.weight>=1 ? billingItem.weight+"kg" : (billingItem.weight*1000)+"g";
+        const { vegetableItem } = this.props;
+        const vegetableItemWeight = vegetableItem.weight>=1 ? vegetableItem.weight+"kg" : (vegetableItem.weight*1000)+"g";
         return (
             <div className='billItemDetail'>
-                <div className="billItemName">{billingItem.name}</div>
-                <div className="billItemWeight">{billingItemWeight}</div>
+                <div className="billItemName">{vegetableItem.name}</div>
+                <div className="billItemWeight">{vegetableItemWeight}</div>
                 <div className="billItemPrice">
-                    <p>₹{billingItem.price}</p>
-                    <s>₹{billingItem.MRP}</s>
+                    <p>₹{vegetableItem.price}</p>
+                    <s>₹{vegetableItem.MRP}</s>
                 </div>
             </div>
         )

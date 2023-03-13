@@ -5,7 +5,7 @@ import VEGETABLE_ITEMS from '../data/vegetableData.json';
 import { CART_STATUS } from '../data/constData';
 import { searchVegetable } from './components/organism/header/molecules/atoms/SearchBar';
 import { clearCartHandler } from './components/billingPage/mainSection/molecules/atoms/BillSectionHeading';
-import { addItemsToCartHandler, decreaseItemsFromCartHandler, removeItemFromCartHandler } 
+import { incrementItemInCartHandler, decrementItemInCartHandler, removeItemFromCartHandler } 
         from './components/billingPage/mainSection/molecules/atoms/billItemBtnsHelperFunction';
 
 //componenets fetching
@@ -24,8 +24,8 @@ class BillingPage extends Component {
         }
         //binding helper functions
         this.searchVegetable = searchVegetable.bind(this);
-        this.addItemsToCartHandler = addItemsToCartHandler.bind(this);
-        this.decreaseItemsFromCartHandler = decreaseItemsFromCartHandler.bind(this);
+        this.incrementItemInCartHandler =incrementItemInCartHandler.bind(this);
+        this.decrementItemInCartHandler = decrementItemInCartHandler.bind(this);
         this.removeItemFromCartHandler = removeItemFromCartHandler.bind(this);
         this.clearCartHandler = clearCartHandler.bind(this);
     }

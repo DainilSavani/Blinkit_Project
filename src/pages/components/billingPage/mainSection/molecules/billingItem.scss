@@ -44,12 +44,12 @@ div.billingItem {
         }
     }
 
-    div.billItemButtons {
+    div.billItemBtnSection {
         @include flexDisplay();
         margin-left: auto;
         margin-right: 0;
 
-        div.billItemAddBtn {
+        div.billItemBtn {
             @include flexDisplay();
             width: 5rem;
             margin-right: 1rem;

@@ -7,12 +7,12 @@ export class BillingItem extends Component {
 
     loadBillingItem = (props) => {
         const {vegetableItems, searchBarValue} = props.state;
-        return vegetableItems.map((billingItem, itemIndex) => {
-            if (billingItem.count>0 && billingItem.name.toLowerCase().includes(searchBarValue.toLowerCase())) {
+        return vegetableItems.map((vegetableItem, itemIndex) => {
+            if (vegetableItem.count>0 && vegetableItem.name.toLowerCase().includes(searchBarValue.toLowerCase())) {
                 return <div key={itemIndex} className='billingItem'>
-                    <img src={billingItem.src} alt={billingItem.name} />
-                    <BillItemDetail billingItem={billingItem} />
-                    <BillItemBtns {...props} billingItem={billingItem} itemIndex={itemIndex} />
+                    <img src={vegetableItem.src} alt={vegetableItem.name} />
+                    <BillItemDetail vegetableItem={vegetableItem} />
+                    <BillItemBtns {...props} vegetableItem={vegetableItem} itemIndex={itemIndex} />
                 </div>
             }
         });

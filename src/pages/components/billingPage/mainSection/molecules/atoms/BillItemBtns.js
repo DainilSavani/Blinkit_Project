@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
+import ItemCartBtns from '../../../../atoms/ItemCartBtns';
 
 class BillItemBtns extends Component {
-    loadItemButtons = ({ billingItem, itemIndex, addItemsToCartHandler, decreaseItemsFromCartHandler }) => {
-        return <div className="billItemAddBtn">
-            <button className='decreaseItem' onClick={() => decreaseItemsFromCartHandler(itemIndex)}>-</button>
-            <div className='itemValue'>{billingItem.count}</div>
-            <button className='increaseItem' onClick={() => addItemsToCartHandler(itemIndex)}>+</button>
-        </div>
+    loadItemButtons = (props) => {
+        return <ItemCartBtns {...props} />
 
     }
     render() {
-        const {removeItemFromCartHandler, itemIndex} = this.props;
+        const {removeItemFromCartHandler, itemIndex, vegetableItem} = this.props;
         return (
-            <div className="billItemButtons">
+            <div className="billItemBtnSection">
                 {this.loadItemButtons(this.props)}
                 <button className="removeItem" onClick={() => removeItemFromCartHandler(itemIndex)}>Remove</button>
             </div>

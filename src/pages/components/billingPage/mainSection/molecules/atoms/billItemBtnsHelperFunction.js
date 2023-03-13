@@ -1,4 +1,4 @@
-export const addItemsToCartHandler = function addItemsToCartHandler(itemIndex){
+export const incrementItemInCartHandler = function incrementItemInCartHandler(itemIndex){
     this.setState(prevState => ({
         vegetableItems: [
             ...prevState.vegetableItems.slice(0, itemIndex),
@@ -13,7 +13,7 @@ export const addItemsToCartHandler = function addItemsToCartHandler(itemIndex){
     }));
 }
 
-export const decreaseItemsFromCartHandler = function decreaseItemsFromCartHandler(itemIndex){
+export const decrementItemInCartHandler = function decrementItemInCartHandler(itemIndex){
     this.setState(prevState => ({
         vegetableItems: [
             ...prevState.vegetableItems.slice(0, itemIndex),
