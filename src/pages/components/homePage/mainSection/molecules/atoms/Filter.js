@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { FILTER_TYPES } from '../../../../../../data/constData';
 
 export const filterHandler = function filterHandler(value){
-    this.setState({filterType: value}, ()=>{console.log(this.state.filterType)});
+    this.setState({filterType: value});
 }
 
 export class Filter extends Component {

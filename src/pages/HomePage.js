@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 //fetching constants and functions
-import vegetableData from '../data/vegetablesData.json';
+import VEGETABLE_ITEMS from '../data/vegetablesData.json';
 import {FILTER_TYPES, CART_STATUS} from '../data/constData';
-import { addToCartHandler, removeFromCartHandler } from './components/homePage/mainSection/molecules/itemPriceHelperFunction';
+import { incrementItemInCartHandler, decrementItemInCartHandler } from './components/atoms/itemCartBtnHelperFunctions';
 import { searchVegetable } from './components/organism/header/molecules/atoms/SearchBar';
 import { filterHandler } from './components/homePage/mainSection/molecules/atoms/Filter';
 
@@ -18,13 +18,13 @@ export class HomePage extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            vegetableData: vegetableData,
+            vegetableItems: VEGETABLE_ITEMS,
             cartStatus: CART_STATUS,
             searchBarValue: "",
             filterType: FILTER_TYPES[0].value
         }
-        this.addToCartHandler = addToCartHandler.bind(this);
-        this.removeFromCartHandler = removeFromCartHandler.bind(this);
+        this.incrementItemInCartHandler = incrementItemInCartHandler.bind(this);
+        this.decrementItemInCartHandler = decrementItemInCartHandler.bind(this);
         this.searchVegetable = searchVegetable.bind(this);
         this.filterHandler = filterHandler.bind(this);
     }

@@ -6,9 +6,9 @@ import './itemPrice.scss';
 class ItemPrice extends Component {
 
     loadItemButtons = (props) => {
-        const { vegetableItem, itemIndex, addToCartHandler } = props;
+        const { vegetableItem, itemIndex, incrementItemInCartHandler} = props;
         if (vegetableItem.count === 0)
-            return <button className='addBtn' onClick={() => addToCartHandler(itemIndex)}>ADD</button>
+            return <button className='addBtn' onClick={() => incrementItemInCartHandler(itemIndex)}>ADD</button>
         else
             return <ItemCartBtns {...props} />
 
