@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { LOCATION } from '../../../../../../data/constData';
+import { LOCATION } from '../../../../../data/constData';
 import LocationInput from './atoms/LocationInput';
 import './location.scss';
 
