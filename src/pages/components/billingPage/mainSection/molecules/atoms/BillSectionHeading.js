@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 //for reseting products count on clear cart
-import VEGETABLE_ITEMS from '../../../../../../../data/vegetableData.json';
-import { CART_STATUS } from '../../../../../../../data/constData';
+import VEGETABLE_ITEMS from '../../../../../../data/vegetableData.json';
+import { CART_STATUS } from '../../../../../../data/constData';
 
 export const clearCartHandler = function clearCartHandler() {
     this.setState({

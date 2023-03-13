@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Location from './molecules/Location';
+import Location from '../header/molecules/Location';
 import {SearchBar} from './molecules/atoms/SearchBar';
 import CartBtn from './molecules/CartBtn';
 import './navbar.scss';

@@ -1,4 +1,4 @@
-@import '../../../../mixin';
+@import '../../../mixin';
 
 section.service {
     @include initial;
@@ -28,7 +28,6 @@ section.service {
 }
 
 div.about {
-    @include initial;
     margin: 2rem 10rem;
     text-align: left;
     font-size: 0.9rem;
