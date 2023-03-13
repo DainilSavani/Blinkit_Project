@@ -6,7 +6,7 @@ import { CART_STATUS } from '../data/constData';
 import { searchVegetable } from './components/organism/header/molecules/atoms/SearchBar';
 import { clearCartHandler } from './components/billingPage/mainSection/molecules/atoms/BillSectionHeading';
 import { incrementItemInCartHandler, decrementItemInCartHandler, removeItemFromCartHandler } 
-        from './components/billingPage/mainSection/molecules/atoms/billItemBtnsHelperFunction';
+        from './components/atoms/itemCartBtnHelperFunctions';
 
 //componenets fetching
 import Navbar from './components/organism/header/Navbar';
