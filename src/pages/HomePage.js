@@ -3,11 +3,11 @@ import { Provider } from 'react-redux';
 import store from '../redux/store';
 
 //importing components
-import Navbar from './components/homePage/organisms/header/Navbar'
-import SubHeaderCategories from './components/homePage/organisms/header/molecules/SubHeaderCategories'
-import MainProductSection from './components/homePage/organisms/mainContent/MainProductSection';
-import OurServices from './components/homePage/molecules/services/OurServices';
-import Foot from './components/homePage/molecules/footer/Foot';
+import Navbar from './components/organism/header/Navbar'
+import SubHeaderCategories from './components/homePage/molecules/subHeaderCategories/SubHeaderCategories'
+import MainProductSection from './components/homePage/mainSection/MainProductSection';
+import OurServices from './components/molecules/services/OurServices';
+import Foot from './components/molecules/footer/Foot';
 
 export class HomePage extends Component {
 
