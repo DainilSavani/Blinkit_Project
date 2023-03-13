@@ -6,8 +6,8 @@ import './productItem.scss';
 
 class ProductItem extends Component {
 
-    loadProductItems = (homePageObj, state) =>
-        state.vegetableData.map((vegetableItem, itemIndex) => {
+    loadProductItems = (props, state) =>
+        state.vegetableItems.map((vegetableItem, itemIndex) => {
             if (vegetableItem.name.toLowerCase().includes(state.searchBarValue.toLowerCase()) && (state.filterType === 'all' || state.filterType === vegetableItem.type)) {
                 const itemWeight = vegetableItem.weight>=1 ? vegetableItem.weight+'kg' : vegetableItem.weight*1000+'g';
                 return (
@@ -17,7 +17,7 @@ class ProductItem extends Component {
                         <ItemSourcedTime />
                         <div className="itemName">{vegetableItem.name}</div>
                         <div className="itemWeight">{itemWeight}</div>
-                        <ItemPrice itemIndex={itemIndex} vegetableItem={vegetableItem} {...homePageObj} />
+                        <ItemPrice itemIndex={itemIndex} vegetableItem={vegetableItem} {...props} />
                     </div>
                 )
             }
