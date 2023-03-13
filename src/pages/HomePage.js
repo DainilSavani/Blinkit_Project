@@ -3,14 +3,14 @@ import React, { Component } from 'react';
 //fetching constants and functions
 import vegetableData from '../data/vegetablesData.json';
 import {FILTER_TYPES, CART_STATUS} from '../data/constData';
-import { addToCartHandler, removeFromCartHandler } from './components/homePage/organisms/mainSection/molecules/itemPriceHelperFunction';
+import { addToCartHandler, removeFromCartHandler } from './components/homePage/mainSection/molecules/itemPriceHelperFunction';
 import { searchVegetable } from './components/organism/header/molecules/atoms/SearchBar';
-import { filterHandler } from './components/homePage/organisms/mainSection/molecules/atoms/Filter';
+import { filterHandler } from './components/homePage/mainSection/molecules/atoms/Filter';
 
 //importing components
 import Navbar from './components/organism/header/Navbar';
-import SubHeaderCategories from './components/homePage/organisms/molecules/subHeaderCategories/SubHeaderCategories'
-import MainProductSection from './components/homePage/organisms/mainSection/MainProductSection';
+import SubHeaderCategories from './components/homePage/molecules/subHeaderCategories/SubHeaderCategories'
+import MainProductSection from './components/homePage/mainSection/MainProductSection';
 import OurServices from './components/molecules/services/OurServices';
 import Foot from './components/molecules/footer/Foot';
 

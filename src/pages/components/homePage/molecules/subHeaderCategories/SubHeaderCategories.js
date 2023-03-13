@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { SUB_HEADER_CATEGORIES, MORE_SUB_HEADER_CATEGORIES } from '../../../../../../data/constData';
+import { SUB_HEADER_CATEGORIES, MORE_SUB_HEADER_CATEGORIES } from '../../../../../data/constData';
 import './subHeaderCategories.scss';
 
 class SubHeaderCategories extends Component {
