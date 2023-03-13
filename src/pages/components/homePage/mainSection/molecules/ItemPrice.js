@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ItemPriceValue from './atoms/ItemPriceValue';
-import ItemCartBtns from '../../../../atoms/ItemCartBtns';
+import ItemCartBtns from '../../../atoms/ItemCartBtns';
 import './itemPrice.scss';
 
 class ItemPrice extends Component {
