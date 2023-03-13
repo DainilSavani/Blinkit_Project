@@ -3,16 +3,16 @@ import React, { Component } from 'react';
 //fetching constants and functions
 import vegetableData from '../data/vegetablesData.json';
 import {FILTER_TYPES, CART_STATUS} from '../data/constData';
-import { addToCartHandler, removeFromCartHandler } from './components/homePage/organisms/mainContent/molecules/itemPriceHelperFunction';
-import { searchVegetable } from './components/homePage/organisms/header/molecules/atoms/SearchBar';
-import { filterHandler } from './components/homePage/organisms/mainContent/molecules/atoms/Filter';
+import { addToCartHandler, removeFromCartHandler } from './components/homePage/organisms/mainSection/molecules/itemPriceHelperFunction';
+import { searchVegetable } from './components/organism/header/molecules/atoms/SearchBar';
+import { filterHandler } from './components/homePage/organisms/mainSection/molecules/atoms/Filter';
 
 //importing components
-import Navbar from './components/homePage/organisms/header/Navbar'
-import SubHeaderCategories from './components/homePage/organisms/header/molecules/SubHeaderCategories'
-import MainProductSection from './components/homePage/organisms/mainContent/MainProductSection';
-import OurServices from './components/homePage/molecules/services/OurServices';
-import Foot from './components/homePage/molecules/footer/Foot';
+import Navbar from './components/organism/header/Navbar';
+import SubHeaderCategories from './components/homePage/organisms/molecules/subHeaderCategories/SubHeaderCategories'
+import MainProductSection from './components/homePage/organisms/mainSection/MainProductSection';
+import OurServices from './components/molecules/services/OurServices';
+import Foot from './components/molecules/footer/Foot';
 
 export class HomePage extends Component {
     constructor(props) {

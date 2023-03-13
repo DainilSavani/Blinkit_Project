@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { SOCIAL_MEDIA_ICONS_CLASSES } from '../../../../../../data/constData';
+import { SOCIAL_MEDIA_ICONS_CLASSES } from '../../../../../data/constData';
 
 class FootRight extends Component {
     
