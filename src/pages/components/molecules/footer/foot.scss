@@ -1,0 +1,45 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import '../../../mixin';
+
+section.foot {
+    @include initial;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 1.5rem 10rem;
+    color: gray;
+    flex-wrap: wrap;
+    div.footLeft {
+        font-size: 0.8rem;
+    }
+    div.footMiddle {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        justify-content: center;
+        img {
+            width: 5rem;
+            margin: 0 0.6rem;
+        }
+        img:hover {
+            cursor: pointer;
+        }
+    }
+    div.footRight {
+        
+        a.fa{
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0.1rem 0.7rem 0.1rem 0.1rem;
+            text-align: center;
+            background-color: rgb(36, 36, 38);
+            border-radius: 3rem;
+            padding: 0.5rem;
+        }
+        a.fa-facebook{
+            width: 0.9rem;
+        }
+    }
+}
