@@ -1,16 +1,18 @@
-import React, { Component } from 'react'
+import React from 'react';
+import { useDispatch } from 'react-redux';
 
-class ItemCartBtns extends Component {
-    render() {
-        const {incrementItemInCartHandler, decrementItemInCartHandler, vegetableItem, itemIndex} = this.props;
-        return (
-            <div className="billItemBtn">
-                <button className='decreaseItem' onClick={() => decrementItemInCartHandler(itemIndex)}>-</button>
-                <div className='itemValue'>{vegetableItem.count}</div>
-                <button className='increaseItem' onClick={() => incrementItemInCartHandler(itemIndex)}>+</button>
-            </div>
-        )
-    }
+function ItemCartBtns(props) {
+
+    const dispatch = useDispatch();
+    const { incrementItemInCartHandler, decrementItemInCartHandler, vegetableItem, itemIndex } = props;
+
+    return (
+        <div className="billItemBtn">
+            <button className='decreaseItem' onClick={() => dispatch(decrementItemInCartHandler(itemIndex))}>-</button>
+            <div className='itemValue'>{vegetableItem.count}</div>
+            <button className='increaseItem' onClick={() => dispatch(incrementItemInCartHandler(itemIndex))}>+</button>
+        </div>
+    )
 }
 
 export default ItemCartBtns
