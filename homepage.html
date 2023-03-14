@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/homepage.css">
+    <link rel="stylesheet" href="/navbar.css">
+    <script src="https://unpkg.com/htmlincludejs"></script>
+    <script type="text/javascript" src="/homescript.js" defer></script>
+    <title>Everything delivered in minutes | blinkit</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="images/logo.webp" alt="error">
+        </div>
+        <div class="location">
+            <h1>Delivery in 10 minutes</h1>
+            <select name="location">
+                <option value="del">Delhi, India</option>
+                <option value="ban">Bangaluru, India</option>
+                <option value="bom">Bombay, India</option>
+            </select>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="search">
+        </div>
+        <div class="login">
+            <a href="">Login</a>
+        </div>
+        <div class="cart">
+            <button class="cart_btn" id="cart_btn_id">
+                <img src="/images/download.png" alt="error">
+                <div class="cart_btn_text">My Cart</div>
+            </button>
+        </div>
+    </div>
+    <div class="list">
+        <p>Vegetables & Fruits</p>
+        <p>Dairy & Breakfast</p>
+        <p>Muchies</p>
+        <p>Cold Drinks & Juices</p>
+        <p>Instant & Frozen Food</p>
+        <p>Tea, Coffee & Health Drinks</p>
+        <p>Bakery & Biscuits</p>
+        <p>More</p>
+    </div>
+    <!-- <include class="navbar" src="/navbar.html"></include> -->
+    <div class="content">
+        <div class="cat">
+            <div class="subcat">
+                <div id="img1">
+                    <img src="/images/categories/all+fresh.webp" alt="error">
+                </div>
+                <p>All</p>
+            </div>
+            <div class="subcat">
+                <div id="img2">
+                    <img src="/images/categories/all+fresh.webp" alt="error">
+                </div>
+                <p>Fresh Vegetables</p>
+            </div>
+            <div class="subcat">
+                <div id="img3">
+                    <img src="/images/categories/fresh fruits.webp" alt="error">
+                </div>
+                <p>Fresh Fruits</p>
+            </div>
+            <div class="subcat">
+                <div id="img4">
+                    <img src="/images/categories/exotics.webp" alt="error">
+                </div>
+                <p>Exotics</p>
+            </div>
+            <div class="subcat">
+                <div id="img5">
+                    <img src="/images/categories/seasonal.webp" alt="error">
+                </div>
+                <p>Seasonal</p>
+            </div>
+            <div class="subcat">
+                <div id="img6">
+                    <img src="/images/categories/organic.jpeg" alt="error">
+                </div>
+                <p>Organic & Hydroponic</p>
+            </div>
+            <div class="subcat">
+                <div id="img7">
+                    <img src="/images/categories/freshly cut.webp" alt="error">
+                </div>
+                <p>Freshly Cut & Sprouts</p>
+            </div>
+        </div>
+        <div class="product">
+            <div class="head">
+                <h2>Buy Fresh Vegetables Online</h2>
+                <div class="sort">
+                    <p>Sort By</p>
+                    <select name="sortby" id="sortby">
+                        <option value="rel" selected>Relevance</option>
+                        <option value="nut">Nutrition</option>
+                    </select>
+                </div>
+            </div>
+            <div class="container">
+            </div>
+        </div>
+    </div>
+    <include class="services" src="/services.html"></include>
+    <include class="footer" src="/footer.html"></include>
+</body>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<script type="text/javascript" src="/script.js" defer></script>
+</html>

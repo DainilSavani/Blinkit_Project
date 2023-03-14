@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="billing.css">
+    <link rel="stylesheet" href="navbar.css">
+    <script src="https://unpkg.com/htmlincludejs"></script>
+    <script type="text/javascript" src="/billing.js" defer></script>
+    <title>Your Shopping Cart</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="images/logo.webp" alt="error">
+        </div>
+        <div class="location">
+            <h1>Delivery in 10 minutes</h1>
+            <select name="location">
+                <option value="del">Delhi, India</option>
+                <option value="ban">Bangaluru, India</option>
+                <option value="bom">Bombay, India</option>
+            </select>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="search">
+        </div>
+        <div class="login">
+            <a href="">Login</a>
+        </div>
+        <div class="cart">
+            <button class="cart_btn" id="cart_btn_id">
+                <img src="/images/download.png" alt="error">
+                <div class="cart_btn_text">My Cart</div>
+            </button>
+        </div>
+    </div>
+    <div class="list">
+        <p>Vegetables & Fruits</p>
+        <p>Dairy & Breakfast</p>
+        <p>Muchies</p>
+        <p>Cold Drinks & Juices</p>
+        <p>Instant & Frozen Food</p>
+        <p>Tea, Coffee & Health Drinks</p>
+        <p>Bakery & Biscuits</p>
+        <p>More</p>
+    </div>
+    <section class="bill">
+        <div class="heading">
+            <p>Place Order</p>
+        </div>
+        <div class="subheading">
+        </div>
+        <div class="bill_container">
+        </div>
+        <div class="total"></div>
+    </section>
+    <section class="bill_total">
+        <div class="coupon">
+            <p>Coupons are only applicable on Blinkit app</p>
+        </div>
+        <div class="proceed">
+            <div class="proceed_bar">
+            </div>
+        </div>
+    </section>
+    <include class="services" src="/services.html"></include>
+    <include class="footer" src="/footer.html"></include>
+</body>
+</html>
