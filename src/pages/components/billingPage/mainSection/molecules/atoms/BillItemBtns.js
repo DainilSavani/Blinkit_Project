@@ -1,30 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ItemCartBtns from '../../../../atoms/ItemCartBtns';
-import { connect } from 'react-redux';
-import { incrementItemInCartHandler, decrementItemInCartHandler, removeItemFromCartHandler } from '../../../../../../redux/actions';
+import { useDispatch } from 'react-redux';
+import { removeItemFromCartHandler } from '../../../../../../redux/actions';
 
-class BillItemBtns extends Component {
-    loadItemButtons = (props) => {
-        return <ItemCartBtns {...props} />
+function BillItemBtns(props) {
 
-    }
-    render() {
-        const {removeItemFromCartHandler, itemIndex} = this.props;
-        return (
-            <div className="billItemButtons">
-                {this.loadItemButtons(this.props)}
-                <button className="removeItem" onClick={() => removeItemFromCartHandler(itemIndex)}>Remove</button>
-            </div>
-        )
-    }
+    const dispatch = useDispatch();
+    const {itemIndex} = props;
+
+    return (
+        <div className="billItemButtons">
+            <ItemCartBtns {...props} />
+            <button className="removeItem" onClick={() => dispatch(removeItemFromCartHandler(itemIndex))}>Remove</button>
+        </div>
+    )
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        incrementItemInCartHandler: itemIndex => dispatch(incrementItemInCartHandler(itemIndex)),
-        decrementItemInCartHandler: itemIndex => dispatch(decrementItemInCartHandler(itemIndex)),
-        removeItemFromCartHandler: itemIndex => dispatch(removeItemFromCartHandler(itemIndex))
-    }
-}
-
-export default connect(null, mapDispatchToProps)(BillItemBtns);
+export default BillItemBtns

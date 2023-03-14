@@ -1,14 +1,14 @@
-import React, { Component} from 'react';
+import React from 'react';
 import BillItemDetail from './atoms/BillItemDetail';
 import BillItemBtns from './atoms/BillItemBtns';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import './billingItem.scss';
 
-export class vegetableItem extends Component {
+function BillingItem() {
 
-    loadvegetableItem = ({ vegetableItems, searchBarValue }) => {
+    const loadVegetableItem = ({ vegetableItems, searchBarValue }) => {
         return vegetableItems.map((vegetableItem, itemIndex) => {
-            if (vegetableItem.count>0 && vegetableItem.name.toLowerCase().includes(searchBarValue.toLowerCase())) {
+            if (vegetableItem.count > 0 && vegetableItem.name.toLowerCase().includes(searchBarValue.toLowerCase())) {
                 return <div key={itemIndex} className='billingItem'>
                     <img src={vegetableItem.src} alt={vegetableItem.name} />
                     <BillItemDetail vegetableItem={vegetableItem} />
@@ -18,18 +18,11 @@ export class vegetableItem extends Component {
         });
     }
 
-    render() {
-        return <div className='vegetableItemContainer'>
-            {this.loadvegetableItem(this.props)}
+    return (
+        <div className='vegetableItemContainer'>
+            {loadVegetableItem(useSelector(state => state))}
         </div>
-    }
+    )
 }
 
-const mapStateToProps = state => {
-    return {
-        vegetableItems: state.vegetableData,
-        searchBarValue: state.searchBarValue
-    }
-}
-
-export default connect(mapStateToProps, null)(vegetableItem)
+export default BillingItem
