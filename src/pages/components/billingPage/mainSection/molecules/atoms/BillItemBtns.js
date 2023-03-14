@@ -4,15 +4,12 @@ import { connect } from 'react-redux';
 import { incrementItemInCartHandler, decrementItemInCartHandler, removeItemFromCartHandler } from '../../../../../../redux/actions';
 
 class BillItemBtns extends Component {
-    loadItemButtons = (props) => {
-        return <ItemCartBtns {...props} />
-
-    }
+    
     render() {
         const {removeItemFromCartHandler, itemIndex} = this.props;
         return (
             <div className="billItemButtons">
-                {this.loadItemButtons(this.props)}
+                <ItemCartBtns {...this.props} />
                 <button className="removeItem" onClick={() => removeItemFromCartHandler(itemIndex)}>Remove</button>
             </div>
         )
