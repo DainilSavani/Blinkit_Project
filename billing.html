@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="billing.css">
+    <script src="https://unpkg.com/htmlincludejs"></script>
+    <title>Your Shopping Cart</title>
+</head>
+<body>
+    <include class="navbar" src="/navbar.html"></include>
+    <section class="bill">
+        <header class="heading">Place Order</header>
+        <div class="subheading">
+            <h4>Delivery in 10 minutes</h4>
+            <p>6 items</p>
+        </div>
+        <div class="billContainer">
+            <div class="billItem">
+                <img src="/images/vegetables/potato.avif" alt="item">
+                <div class="billItemDetail">
+                    <div class="billItemName">New Potato</div>
+                    <div class="billItemWeight">1 kg</div>
+                    <div class="billItemPrice">
+                        <p>₹15</p>
+                        <s>₹17</s>
+                    </div>
+                </div>
+                <div class="billItemBtn">
+                    <button class="decreaseItem">-</button>
+                    <button class="itemValue">2</button>
+                    <button class="increaseItem">+</button>
+                </div>
+            </div>
+            <div class="billItem">
+                <img src="/images/vegetables/carrot.avif" alt="item">
+                <div class="billItemDetail">
+                    <div class="billItemName">Local Carrot</div>
+                    <div class="billItemWeight">500 g</div>
+                    <div class="billItemPrice">
+                        <p>₹17</p>
+                        <s>₹19</s>
+                    </div>
+                </div>
+                <div class="billItemBtn">
+                    <button class="decreaseItem">-</button>
+                    <button class="itemValue">1</button>
+                    <button class="increaseItem">+</button>
+                </div>
+            </div>
+            <div class="billItem">
+                <img src="/images/vegetables/onion.avif" alt="item">
+                <div class="billItemDetail">
+                    <div class="billItemName">Onion</p></div>
+                    <div class="billItemWeight">1 kg</div>
+                    <div class="billItemPrice">
+                        <p>₹32</p>
+                        <s>₹41</s>
+                    </div>
+                </div>
+                <div class="billItemBtn">
+                    <button class="decreaseItem">-</button>
+                    <button class="itemValue">1</button>
+                    <button class="increaseItem">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="total">
+            <div class="mrp">
+                <p>MRP</p>
+                <p>₹176</p>
+            </div>
+            <div class="productDiscount">
+                <p>Product discount</p>
+                <p>-₹33</p>
+            </div>
+            <div class="deliveryCharge">
+                <p>Delivery charge</p>
+                <div class="charge">
+                    <s>₹15</s>
+                    <p>FREE</p>
+                </div>
+            </div>
+            <div class="grandTotal">
+                <p>Grand total</p>
+                <p>₹143</p>
+            </div>
+        </div>
+    </section>
+    <section class="billTotal">
+        <div class="coupon">Coupons are only applicable on Blinkit app</div>
+        <div class="proceed">
+            <div class="proceedBar">
+                <div class="proceedItems">
+                    <p>6</p>
+                    <p>items</p>
+                    <p>:</p>
+                    <p>₹143</p>
+                    <s>₹176</s>
+                </div>
+                <div class="proceedBtn">
+                    <p>Proceed ></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <include class="services" src="/services.html"></include>
+    <include class="footer" src="/footer.html"></include>
+</body>
+</html>
