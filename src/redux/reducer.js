@@ -6,7 +6,7 @@ const reducer = (state = INITIAL_STATE, action) => {
     switch(action.type) {
         case INCREMENT_ITEM_IN_CART:
             return produce(state, draft => {
-                const item = draft.vegetableData[action.itemIndex];
+                const item = draft.vegetableItems[action.itemIndex];
                 item.count += action.payload;
                 draft.cartStatus.itemsCount += action.payload;
                 draft.cartStatus.itemsMRP += action.payload * item.MRP;
@@ -15,7 +15,7 @@ const reducer = (state = INITIAL_STATE, action) => {
 
         case DECREMENT_ITEM_IN_CART:
             return produce(state, draft => {
-                const item = draft.vegetableData[action.itemIndex];
+                const item = draft.vegetableItems[action.itemIndex];
                 item.count -= action.payload;
                 draft.cartStatus.itemsCount -= action.payload;
                 draft.cartStatus.itemsMRP -= action.payload * item.MRP;
@@ -24,8 +24,7 @@ const reducer = (state = INITIAL_STATE, action) => {
 
         case REMOVE_ITEM_FROM_CART:
             return produce(state, draft => {
-                console.log(action.itemIndex)
-                const item = draft.vegetableData[action.itemIndex];
+                const item = draft.vegetableItems[action.itemIndex];
                 draft.cartStatus.itemsCount -= item.count;
                 draft.cartStatus.itemsMRP -= item.count * item.MRP;
                 draft.cartStatus.itemsAmount -= item.count * item.price;
