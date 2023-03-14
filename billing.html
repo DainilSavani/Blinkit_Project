@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="billing.css">
+    <link rel="stylesheet" href="navbar.css">
+    <script src="https://unpkg.com/htmlincludejs"></script>
+    <script type="module" src="./billing_model.mjs" defer></script>
+    <script type="module" src="./billing_view.mjs" defer></script>
+    <script type="module" src="./billing_controller.mjs" defer></script>
+    <title>Your Shopping Cart</title>
+</head>
+<body>
+    <iframe id="iframe" src="./navbar.html" iframetag></iframe>
+    <section class="bill">
+        <div class="heading">
+            <p>Place Order</p>
+        </div>
+        <div class="subheading">
+            <div class="delivery">
+            </div>
+            <button id="clearCart">Clear Cart</button>
+        </div>
+        <div class="bill_container">
+        </div>
+        <div class="total"></div>
+    </section>
+    <section class="bill_total">
+        <div class="coupon">
+            <p>Coupons are only applicable on Blinkit app</p>
+        </div>
+        <div class="proceed">
+            <div class="proceed_bar">
+            </div>
+        </div>
+    </section>
+    <iframe class="services" src="./services.html" iframetag scrolling="no"></iframe>
+    <iframe class="footer" src="./footer.html" iframetag scrolling="no"></iframe>
+</body>
+</html>

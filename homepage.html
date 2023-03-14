@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/homepage.css">
+    <link rel="stylesheet" href="/navbar.css">
+    <script src="https://unpkg.com/htmlincludejs"></script>
+    <script type="module" src="./home_model.mjs" defer></script>
+    <script type="module" src="./home_view.mjs" defer></script>
+    <script type="module" src="./home_controller.mjs" defer></script>
+    <title>Everything delivered in minutes | blinkit</title>
+</head>
+<body>
+    <iframe id="iframe" src="./navbar.html" iframetag></iframe>
+    <div class="content">
+        <div class="cat">
+            <div class="subcat">
+                <div id="img1">
+                    <img src="/images/categories/all+fresh.webp" alt="error">
+                </div>
+                <p>All</p>
+            </div>
+            <div class="subcat">
+                <div id="img2">
+                    <img src="/images/categories/all+fresh.webp" alt="error">
+                </div>
+                <p>Fresh Vegetables</p>
+            </div>
+            <div class="subcat">
+                <div id="img3">
+                    <img src="/images/categories/fresh fruits.webp" alt="error">
+                </div>
+                <p>Fresh Fruits</p>
+            </div>
+            <div class="subcat">
+                <div id="img4">
+                    <img src="/images/categories/exotics.webp" alt="error">
+                </div>
+                <p>Exotics</p>
+            </div>
+            <div class="subcat">
+                <div id="img5">
+                    <img src="/images/categories/seasonal.webp" alt="error">
+                </div>
+                <p>Seasonal</p>
+            </div>
+            <div class="subcat">
+                <div id="img6">
+                    <img src="/images/categories/organic.jpeg" alt="error">
+                </div>
+                <p>Organic & Hydroponic</p>
+            </div>
+            <div class="subcat">
+                <div id="img7">
+                    <img src="/images/categories/freshly cut.webp" alt="error">
+                </div>
+                <p>Freshly Cut & Sprouts</p>
+            </div>
+        </div>
+        <div class="product">
+            <div class="head">
+                <h2>Buy Fresh Vegetables Online</h2>
+                <div class="sort">
+                    <p>Sort By</p>
+                    <select name="sortby" id="sortby">
+                        <option value="all" selected>All</option>
+                        <option value="veg">Veg</option>
+                        <option value="non-veg">Non-veg</option>
+                    </select>
+                </div>
+            </div>
+            <div class="container">
+            </div>
+        </div>
+    </div>
+    <iframe class="services" src="./services.html" iframetag scrolling="no"></iframe>
+    <iframe class="footer" src="./footer.html" iframetag scrolling="no"></iframe>
+</body>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</html>
