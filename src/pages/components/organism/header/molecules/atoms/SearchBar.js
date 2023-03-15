@@ -1,16 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export const searchVegetable = function searchVegetable(value) {
-    this.setState({ searchBarValue: value });
+function SearchBar(props) {
+
+    const { setSearchBarValue } = props;
+
+    return (
+        <input id="searchBar" type="text" placeholder="search" autoComplete='off'
+            onKeyUp={(event) => setSearchBarValue(event.target.value)} />
+    )
 }
 
-export class SearchBar extends Component {
+export default SearchBar
 
-    render() {
-        const { searchVegetable } = this.props;
-        return (
-            <input id="searchBar" type="text" placeholder="search" autoComplete='off'
-                onKeyUp={(event) => searchVegetable(event.target.value)} />
-        )
-    }
-}
