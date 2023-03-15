@@ -1,26 +1,25 @@
-import React, { PureComponent } from 'react';
+import React, { memo } from 'react';
 import { OUR_SERVICES_DATA } from '../../../../data/constData';
 import ServiceBox from './atoms/ServiceBox';
 import './ourServices.scss'
 
-class OurServices extends PureComponent {
+function OurServices() {
 
-    loadOurServices = () => OUR_SERVICES_DATA.map((service, index) => <ServiceBox key={index} service={service}></ServiceBox>)
+    const loadOurServices = () => OUR_SERVICES_DATA.map((service, index) => <ServiceBox key={index} service={service}></ServiceBox>)
 
-    render() {
-        return (
-            <>
-                <section className='service'>
-                    {this.loadOurServices()}
-                </section>
-                <div className='about'>“Blinkit” is owned & managed by "Blink Commerce Private Limited" (formerly known as Grofers India
-                    Private Limited) and is not related, linked or interconnected in whatsoever manner or nature, to “GROFFR.COM”
-                    which is a real estate services business operated by “Redstone Consultancy Services Private Limited”.
-                </div>
-                <hr />
-            </>
-        )
-    }
+    return (
+        <>
+            <section className='service'>
+                {loadOurServices()}
+            </section>
+            <div className='about'>“Blinkit” is owned & managed by "Blink Commerce Private Limited" (formerly known as Grofers India
+                Private Limited) and is not related, linked or interconnected in whatsoever manner or nature, to “GROFFR.COM”
+                which is a real estate services business operated by “Redstone Consultancy Services Private Limited”.
+            </div>
+            <hr />
+        </>
+    )
 }
 
-export default OurServices
+export default memo(OurServices);
+

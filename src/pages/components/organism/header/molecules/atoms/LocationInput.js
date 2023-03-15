@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { LOCATION } from '../../../../../../data/constData';
-class LocationInput extends Component {
 
-    loadLocations = () => LOCATION.map(location => <option key={location.value} value={location.value}>{location.name}</option>)
+function LocationInput(props) {
 
-    render() {
-        const { changeInput } = this.props;
-        return (
-            <select className='locationInput' name='locationInput' onChange={(event) => changeInput(event.target.value)}>
-                {this.loadLocations()}
-            </select>
-        )
-    }
+    const { location, setLocation } = props;
+    const loadLocations = () => LOCATION.map(location => <option key={location.value} value={location.value}>{location.name}</option>)
+
+    return (
+        <select className='locationInput' name='locationInput' value={location} onChange={(event) => setLocation(event.target.value)}>
+            {loadLocations()}
+        </select>
+    )
 }
 
 export default LocationInput
+

@@ -1,27 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ItemPriceValue from './atoms/ItemPriceValue';
 import ItemCartBtns from '../../../atoms/ItemCartBtns';
 import './itemPrice.scss';
+import { incrementItemInCartHandler } from '../../../atoms/itemCartBtnHelperFunctions';
 
-class ItemPrice extends Component {
+function ItemPrice(props) {
 
-    loadItemButtons = (props) => {
-        const { vegetableItem, itemIndex, incrementItemInCartHandler} = props;
+    const { vegetableItem } = props;
+    const loadItemButtons = () => {
         if (vegetableItem.count === 0)
-            return <button className='addBtn' onClick={() => incrementItemInCartHandler(itemIndex)}>ADD</button>
+            return <button className='addBtn' onClick={() => incrementItemInCartHandler(props)}>ADD</button>
         else
             return <ItemCartBtns {...props} />
-
     }
-    render() {
-        const { vegetableItem } = this.props;
-        return (
-            <div className="price">
-                <ItemPriceValue price={vegetableItem.price} mrp={vegetableItem.MRP} />
-                {this.loadItemButtons(this.props)}
-            </div>
-        )
-    }
+    return (
+        <div className="price">
+            <ItemPriceValue price={vegetableItem.price} mrp={vegetableItem.MRP} />
+            {loadItemButtons()}
+        </div>
+    )
 }
 
 export default ItemPrice

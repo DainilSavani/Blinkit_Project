@@ -4,12 +4,13 @@ import ItemSourcedTime from './atoms/ItemSourcedTime';
 import ItemPrice from './ItemPrice';
 import './productItem.scss';
 
-class ProductItem extends Component {
+function ProductItem(props) {
 
-    loadProductItems = (props, state) =>
-        state.vegetableItems.map((vegetableItem, itemIndex) => {
-            if (vegetableItem.name.toLowerCase().includes(state.searchBarValue.toLowerCase()) && (state.filterType === 'all' || state.filterType === vegetableItem.type)) {
-                const itemWeight = vegetableItem.weight>=1 ? vegetableItem.weight+'kg' : vegetableItem.weight*1000+'g';
+    const loadProductItems = (props) => {
+        const { vegetableItems, searchBarValue, filterType } = props;
+        return (vegetableItems.map((vegetableItem, itemIndex) => {
+            if (vegetableItem.name.toLowerCase().includes(searchBarValue.toLowerCase()) && (filterType === 'all' || filterType === vegetableItem.type)) {
+                const itemWeight = vegetableItem.weight >= 1 ? vegetableItem.weight + 'kg' : vegetableItem.weight * 1000 + 'g';
                 return (
                     <div key={itemIndex} className='item'>
                         <button className='discount'>{vegetableItem.discount}</button>
@@ -21,15 +22,14 @@ class ProductItem extends Component {
                     </div>
                 )
             }
-        });
-        
-    render() {
-        return (
-            <section className='container'>
-                {this.loadProductItems(this.props, this.props.state)}
-            </section>
-        )
+        }));
     }
+
+    return (
+        <section className='container'>
+            {loadProductItems(props)}
+        </section>
+    )
 }
 
 export default ProductItem
