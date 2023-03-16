@@ -1,14 +1,13 @@
-import React, { Component} from 'react';
+import React from 'react';
 import BillItemDetail from './atoms/BillItemDetail';
 import BillItemBtns from './atoms/BillItemBtns';
 import './billingItem.scss';
 
-export class BillingItem extends Component {
-
-    loadBillingItem = (props) => {
-        const {vegetableItems, searchBarValue} = props.state;
+function BillingItem(props) {
+    const loadBillingItem = () => {
+        const { vegetableItems, searchBarValue } = props;
         return vegetableItems.map((vegetableItem, itemIndex) => {
-            if (vegetableItem.count>0 && vegetableItem.name.toLowerCase().includes(searchBarValue.toLowerCase())) {
+            if (vegetableItem.count > 0 && vegetableItem.name.toLowerCase().includes(searchBarValue.toLowerCase())) {
                 return <div key={itemIndex} className='billingItem'>
                     <img src={vegetableItem.src} alt={vegetableItem.name} />
                     <BillItemDetail vegetableItem={vegetableItem} />
@@ -17,12 +16,11 @@ export class BillingItem extends Component {
             }
         });
     }
-
-    render() {
-        return <div className='billingItemContainer'>
-            {this.loadBillingItem(this.props)}
+    return (
+        <div className='billingItemContainer'>
+            {loadBillingItem()}
         </div>
-    }
+    )
 }
 
 export default BillingItem

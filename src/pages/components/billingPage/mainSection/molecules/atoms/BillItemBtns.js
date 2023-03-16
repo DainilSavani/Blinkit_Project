@@ -1,20 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ItemCartBtns from '../../../../atoms/ItemCartBtns';
+import { removeItemFromCartHandler } from '../../../../atoms/itemCartBtnHelperFunctions';
 
-class BillItemBtns extends Component {
-    loadItemButtons = (props) => {
-        return <ItemCartBtns {...props} />
-
-    }
-    render() {
-        const {removeItemFromCartHandler, itemIndex, vegetableItem} = this.props;
-        return (
-            <div className="billItemBtnSection">
-                {this.loadItemButtons(this.props)}
-                <button className="removeItem" onClick={() => removeItemFromCartHandler(itemIndex)}>Remove</button>
-            </div>
-        )
-    }
+function BillItemBtns(props) {
+    return (
+        <div className="billItemBtnSection">
+            <ItemCartBtns {...props} />
+            <button className="removeItem" onClick={() => removeItemFromCartHandler(props)}>Remove</button>
+        </div>
+    )
 }
 
 export default BillItemBtns
