@@ -1,15 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class DiscountAmount extends Component {
-    render() {
-        const {productDiscount} = this.props
-        return (
-            <div className="productDiscount">
-                <p>Product discount</p>
-                <p>-₹{productDiscount}</p>
-            </div>
-        )
-    }
+function OriginalAmount(props) {
+    const {  productDiscount } = props;
+    return (
+        <div className="productDiscount">
+            <p>Product discount</p>
+            <p>-₹{productDiscount}</p>
+        </div>
+    )
 }
 
-export default DiscountAmount
+export default OriginalAmount

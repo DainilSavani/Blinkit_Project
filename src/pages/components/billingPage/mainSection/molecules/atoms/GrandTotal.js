@@ -1,15 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class GrandTotal extends Component {
-    render() {
-        const {grandTotal} = this.props
-        return (
-            <div className="grandTotal">
-                <p>Grand total</p>
-                <p>₹{grandTotal}</p>
-            </div>
-        )
-    }
+function GrandTotal(props) {
+    const { grandTotal } = props
+    return (
+        <div className="grandTotal">
+            <p>Grand total</p>
+            <p>₹{grandTotal}</p>
+        </div>
+    )
 }
 
 export default GrandTotal

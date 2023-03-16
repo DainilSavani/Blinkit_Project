@@ -1,15 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class OriginalAmount extends Component {
-    render() {
-        const {originalAmount} = this.props;
-        return (
-            <div className="originalAmount">
-                <p>MRP</p>
-                <p>₹{originalAmount}</p>
-            </div>
-        )
-    }
+function OriginalAmount(props) {
+    const { originalAmount } = props;
+    return (
+        <div className="originalAmount">
+            <p>MRP</p>
+            <p>₹{originalAmount}</p>
+        </div>
+    )
 }
 
 export default OriginalAmount

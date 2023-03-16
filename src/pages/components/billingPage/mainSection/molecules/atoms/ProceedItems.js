@@ -1,18 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class ProceedItems extends Component {
-    render() {
-        const { itemsCount, itemsMRP, itemsAmount } = this.props.cartStatus;
-        return (
-            <div className="proceedItems">
-                <p>{itemsCount}</p>
-                <p>items</p>
-                <p>:</p>
-                <p>₹{itemsAmount}</p>
-                <s>₹{itemsMRP}</s>
-            </div>
-        )
-    }
+function ProceedItems(props) {
+    const { itemsCount, itemsMRP, itemsAmount } = props.cartStatus;
+    return (
+        <div className="proceedItems">
+            <p>{itemsCount}</p>
+            <p>items</p>
+            <p>:</p>
+            <p>₹{itemsAmount}</p>
+            <s>₹{itemsMRP}</s>
+        </div>
+    )
 }
 
 export default ProceedItems
