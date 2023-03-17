@@ -1,0 +1,29 @@
+@import '../../../../../mixin';
+
+div.subCat {
+    @include flexDisplay(left);
+    border-bottom: $borderValue solid black;
+
+    &:hover {
+        background-color: rgb(214, 246, 231);
+        cursor: pointer;
+    }
+
+    div.subCatImg {
+        background-color: rgb(239, 244, 248);
+        border-radius: 0.75rem;
+        height: 4rem;
+        overflow: hidden;
+        margin: 0.8rem 1rem;
+    
+        img {
+            height: 5rem;
+            overflow: hidden;
+        }
+        
+        p {
+            font-size: 0.9rem;
+            margin-right: 1.5rem;
+        }
+    }
+}
