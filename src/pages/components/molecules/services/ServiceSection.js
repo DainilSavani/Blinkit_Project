@@ -1,10 +1,10 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 
 // component
 import ServiceBox from './atoms';
 
 // style
-import './style/servicesSection.scss';
+import './servicesSection.scss';
 
 const SERVICES_SECTION_DATA = [
     {
@@ -25,7 +25,7 @@ const SERVICES_SECTION_DATA = [
     }
 ]
 
-class ServicesSection extends PureComponent {
+class ServicesSection extends Component {
 
     loadServices = () => SERVICES_SECTION_DATA.map((service, index) => <ServiceBox key={index} service={service}></ServiceBox>)
 
@@ -45,4 +45,4 @@ class ServicesSection extends PureComponent {
     }
 }
 
-export default ServicesSection
+export default React.memo(ServicesSection);
