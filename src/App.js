@@ -1,4 +1,4 @@
-import BillingPage from "./pages/BillingPage";
+import BillingPage from "./pages/billingPage";
 
 function App() {
   return (

@@ -1,5 +1,4 @@
 import produce from "immer";
-import { CART_DETAILS } from "../../../../../../helper/constData";
 
 export const clearItemHandler = function clearItemHandler(setState) {
     setState(produce(draft => {

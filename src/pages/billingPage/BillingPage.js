@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 
 //constants 
-import { CART_DETAILS } from './helper/constData';
+import { CART_DETAILS } from '../helper/constData';
 
 //componenets
-import Navbar from './components/organism/navBar';
-import MainBillingSection from "./components/billingPage/organism/mainBillingSection";
-import BillingAmountsSection from './components/billingPage/molecules/billingAmountsSection';
-import ProceedPayment from "./components/billingPage/molecules/proceedPayment";
-import ServiceSection from './components/molecules/services';
-import Footer from './components/molecules/footer';
+import Navbar from '../organism/navBar';
+import MainBillingSection from "./organism/mainBillingSection";
+import BillingAmountsSection from './molecules/billingAmountsSection';
+import ProceedPayment from "./molecules/proceedPayment";
+import ServiceSection from '../molecules/services';
+import Footer from '../molecules/footer';
 
 class BillingPage extends Component {
     constructor(props) {
