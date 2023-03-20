@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import produce from 'immer';
 
 // constant
-import { FILTER_TYPES } from '../../../../../../helper/constData';
+import { FILTER_TYPES } from '../../../../../../../helper/constData';
 
 export const filterHandler = function filterHandler(value, setState){
     setState(produce(draft => {
