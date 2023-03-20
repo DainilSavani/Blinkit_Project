@@ -1,9 +1,9 @@
-import vegetableData from '../data/vegetablesData.json';
-import { CART_STATUS, FILTER_TYPES } from '../data/constData';
+import VEGETABLE_ITEMS from '../pages/helper/vegetablesData.json';
+import { CART_DETAILS, FILTER_TYPES } from '../pages/helper/constData';
 
 const initialState = {
-    vegetableData: vegetableData,
-    cartStatus: CART_STATUS,
+    vegetableItems: VEGETABLE_ITEMS,
+    cartDetails: CART_DETAILS,
     searchBarValue: "",
     filterType: FILTER_TYPES[0].value
 }

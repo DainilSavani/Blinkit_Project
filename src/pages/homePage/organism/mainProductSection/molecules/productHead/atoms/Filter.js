@@ -1,0 +1,33 @@
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+// constant
+import { FILTER_TYPES } from '../../../../../../helper/constData';
+
+// action
+import { filterHandler } from '../../../../../../../redux/actions';
+
+class Filter extends Component {
+    
+    loadFilterOptions = () => FILTER_TYPES.map((option, index) => <option key={index} value={option.value}>{option.name}</option>)
+    
+    render() {
+        const { filterHandler } = this.props;
+        return (
+            <div className='filter'>
+                <p>Filter By</p>
+                <select name='filterBar' id='filterBar' onChange={(event) => filterHandler(event.target.value)}>
+                    {this.loadFilterOptions()}
+                </select>
+            </div>
+        )
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        filterHandler: (filterType) => dispatch(filterHandler(filterType))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Filter);
