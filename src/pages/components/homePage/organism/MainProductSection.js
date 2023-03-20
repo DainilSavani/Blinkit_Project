@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 
 // components
-import { SideBar } from './molecules';
-import { ProductHead } from './molecules';
-import { ProductItem } from './molecules';
+import SideBar from './molecules/sideBar';
+import ProductHead from './molecules/productHead';
+import ProductItem from './molecules/productItem';
 
 // style
-import './style/mainProductSection.scss';
+import './mainProductSection.scss';
 
 class MainProductSection extends Component {
     render() {
-        const { filterHandler } = this.props;
+        const { setState } = this.props;
         return (
             <div className='content'>
                 <SideBar />
                 <div className='product'>
-                    <ProductHead filterHandler={filterHandler}/>
+                    <ProductHead setState={setState}/>
                     <ProductItem {...this.props}/>
                 </div>
             </div>
