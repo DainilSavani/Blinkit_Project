@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 
 // components
 import ItemPriceValue from './atoms';
-import ItemCartBtns from '../../../../molecules/itemCartBtn';
+import ItemCartBtns from '../../../../../molecules/itemCartBtn';
 
 // helper functions
-import { incrementItemHandler, incrementCartHandler } from '../../../../molecules/itemCartBtn/helper/helperFunctions';
+import { incrementItemHandler, incrementCartHandler } from '../../../../../molecules/itemCartBtn/helper/helperFunctions';
 
 // style
 import './itemPrice.scss';
