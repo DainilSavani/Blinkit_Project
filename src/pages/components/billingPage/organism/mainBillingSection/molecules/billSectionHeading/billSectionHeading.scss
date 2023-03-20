@@ -1,0 +1,42 @@
+@import '../../../../../../mixin';
+
+header.billSectionHeading {
+    padding: 1rem 0 2rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: gray;
+}
+
+div.billSubHeading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.3rem 0 1.5rem 0;
+
+    div.delivery {
+        h4 {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        p {
+
+            font-size: 0.9rem;
+        }
+    }
+
+    button.clearCart {
+        width: 5rem;
+        height: 2rem;
+        color: white;
+        border-radius: 0.4rem;
+        border: 0;
+        cursor: pointer;
+        background-color: rgb(77, 170, 223);
+        width: 5rem;
+    }
+
+    button.clearCart:hover {
+        background-color: rgb(52, 118, 157);
+    }
+}
