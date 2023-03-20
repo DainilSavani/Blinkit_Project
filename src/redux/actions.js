@@ -1,5 +1,18 @@
-import { INCREMENT_ITEM_HANDLER, INCREMENT_CART_HANDLER, DECREMENT_ITEM_HANDLER, DECREMENT_CART_HANDLER, 
-        SEARCH_VEGETABLES_HANDLER, FILTER_HANDLER } from "./actionTypes";
+// constants
+import {
+    VEGETABLE_ITEMS_LOADED, VEGETABLE_ITEMS_FAILURE,
+    INCREMENT_ITEM_HANDLER, INCREMENT_CART_HANDLER, DECREMENT_ITEM_HANDLER, DECREMENT_CART_HANDLER,
+    SEARCH_VEGETABLES_HANDLER, FILTER_HANDLER
+} from "./actionTypes";
+
+export const fetchVegetableItems = function fetchVegetableItems() {
+    return dispatch => {
+        return fetch('http://localhost:5000/VEGETABLE_ITEMS')
+        .then(response => response.json())
+        .then(VEGETABLE_ITEMS => dispatch({type: VEGETABLE_ITEMS_LOADED, payload: VEGETABLE_ITEMS}))
+        .catch(err => dispatch({type: VEGETABLE_ITEMS_FAILURE, payload: "Unable to fetch data"}))
+    }
+}
 
 export const incrementItemHandler = function incrementItemHandler(itemIndex) {
     return {

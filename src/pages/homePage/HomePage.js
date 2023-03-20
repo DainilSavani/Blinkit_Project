@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Provider } from 'react-redux';
-import store from '../../redux/store';
+import { connect } from 'react-redux';
 
 //importing components
 import Navbar from '../organism/navBar'
@@ -9,19 +8,32 @@ import MainProductSection from './organism/mainProductSection';
 import OurServices from '../molecules/services';
 import Foot from '../molecules/footer';
 
-export class HomePage extends Component {
+// action
+import { fetchVegetableItems } from '../../redux/actions';
 
+class HomePage extends Component {
+
+    componentDidMount() {
+        this.props.fetchVegetableItems();
+    }
+    
     render() {
         return (
-            <Provider store={store}>
+            <>
                 <Navbar />
                 <SubHeaderCategories />
                 <MainProductSection />
                 <OurServices />
                 <Foot />
-            </Provider>
+            </>
         )
     }
 }
 
-export default HomePage
+const mapDispatchToProps = dispatch => {
+    return {
+        fetchVegetableItems: () => dispatch(fetchVegetableItems())
+    }
+}
+
+export default connect(null, mapDispatchToProps)(HomePage);
