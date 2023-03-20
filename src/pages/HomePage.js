@@ -5,8 +5,8 @@ import { FILTER_TYPES, CART_DETAILS } from './helper/constData';
 
 //importing components
 import Navbar from './components/organism/navBar';
-import SubHeaderCategories from './components/homePage/molecules'
-import MainProductSection from './components/homePage/organism';
+import SubHeaderCategories from './components/homePage/molecules/subHeaderCategories'
+import MainProductSection from './components/homePage/organism/mainProductSection';
 import ServiceSection from './components/molecules/services';
 import Footer from './components/molecules/footer';
 
