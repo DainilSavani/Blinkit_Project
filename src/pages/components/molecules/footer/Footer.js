@@ -1,13 +1,13 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 
 // components
 import { FooterMid } from './atoms';
 import { FooterRight } from './atoms';
 
 // style
-import './style/footer.scss';
+import './footer.scss';
 
-class Footer extends PureComponent {
+class Footer extends Component {
     render() {
         return (
             <section className='footer'>
@@ -21,4 +21,4 @@ class Footer extends PureComponent {
     }
 }
 
-export default Footer
+export default React.memo(Footer);
