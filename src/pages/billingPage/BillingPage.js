@@ -7,7 +7,7 @@ import { CART_DETAILS } from '../helper/constData';
 import Navbar from '../organism/navBar';
 import MainBillingSection from "./organism/mainBillingSection";
 import BillingAmountsSection from './molecules/billingAmountsSection';
-import ProceedPayment from "./molecules/proceedPayment";
+import proceedToPayment from "./molecules/proceedToPayment";
 import ServiceSection from '../molecules/services';
 import Footer from '../molecules/footer';
 
@@ -43,7 +43,7 @@ class BillingPage extends Component {
                     setState = { this.setState }
                 />
                 <BillingAmountsSection cartDetails = { this.state.cartDetails } />
-                <ProceedPayment cartDetails = { this.state.cartDetails } />
+                <proceedToPayment cartDetails = { this.state.cartDetails } />
                 <ServiceSection />
                 <Footer />
             </>

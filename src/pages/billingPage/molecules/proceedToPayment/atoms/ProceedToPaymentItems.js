@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class ProceedItems extends Component {
+class ProceedToPaymentItems extends Component {
     render() {
         const { itemsCount, itemsOriginalPrice, itemsDiscountedPrice } = this.props.cartDetails;
         return (
@@ -15,4 +15,4 @@ class ProceedItems extends Component {
     }
 }
 
-export default ProceedItems
+export default ProceedToPaymentItems

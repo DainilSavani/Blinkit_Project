@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
 // component
-import ProceedItems from './atoms';
+import ProceedToPaymentItems from './atoms';
 
 // style
-import './proceedPayment.scss';
+import './proceedToPayment.scss';
 
-class ProceedPayment extends Component {
+class proceedToPayment extends Component {
     render() {
         const { itemsCount } = this.props;
         if (itemsCount)
@@ -15,7 +15,7 @@ class ProceedPayment extends Component {
                     <div className="coupon">Coupons are only applicable on Blinkit app</div>
                     <div className='proceed'>
                         <div className='proceedBar'>
-                            <ProceedItems {...this.props} />
+                            <ProceedToPaymentItems {...this.props} />
                             <div className="proceedBtn">
                                 <p>Proceed {'>'}</p>
                             </div>
@@ -26,4 +26,4 @@ class ProceedPayment extends Component {
     }
 }
 
-export default ProceedPayment
+export default proceedToPayment

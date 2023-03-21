@@ -7,15 +7,11 @@ import ItemCartBtns from '../../../../../../molecules/itemCartBtn';
 import { removeItemHandler, removeFromCartHandler } from '../../../../../../molecules/itemCartBtn/helper/helperFunctions'
 
 class BillItemBtns extends Component {
-    loadItemButtons = (props) => {
-        return <ItemCartBtns {...props} />
-
-    }
     render() {
         const { itemIndex, setState, vegetableItem } = this.props;
         return (
             <div className="billItemBtnSection">
-                {this.loadItemButtons(this.props)}
+                <ItemCartBtns {...this.props} />
                 <button className="removeItem" onClick={() => {
                     removeFromCartHandler(vegetableItem, setState);
                     removeItemHandler(itemIndex, setState);
