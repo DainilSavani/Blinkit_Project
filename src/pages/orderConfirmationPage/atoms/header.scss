@@ -1,0 +1,11 @@
+@import '../../mixin';
+
+header.navBar {
+    @include initial;
+    height: fit-content;
+    border-bottom: $borderSide;
+    img#logo {
+        width: 6.5rem;
+        padding: 0 1.3rem;
+    }
+}

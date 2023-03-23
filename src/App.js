@@ -1,10 +1,16 @@
-import BillingPage from "./pages/BillingPage";
+import { Provider } from "react-redux";
+
+// components
+import OrderConfirmationPage from "./pages/orderConfirmationPage";
+
+// redux
+import store from "./redux/store";
 
 function App() {
   return (
-    <div className="App">
-      <BillingPage />
-    </div>  
+    <Provider store={store}>
+      <OrderConfirmationPage />
+    </Provider>  
   );
 }
 
