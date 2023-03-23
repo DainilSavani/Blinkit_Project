@@ -1,0 +1,29 @@
+@import '../../../mixin';
+
+div.trackOrder {
+    @include flexDisplay(space-around, center);
+    width: 80rem;
+    margin: 0 auto;
+    border-radius: 0.6rem;
+    background-color: rgb(180, 251, 176);
+
+    img.trackOrderImage {
+        width: 25rem;
+    }
+    div.trackOrderDownloadApp {
+        text-align: center;
+
+        h3 {
+            font-size: 2rem;
+            margin: 0.2rem;
+        }
+        p {
+            font-size: 0.8rem;
+        }
+        img {
+            width: 7rem;
+            margin: 0 0.6rem;
+            cursor: pointer;
+        }
+    }
+}

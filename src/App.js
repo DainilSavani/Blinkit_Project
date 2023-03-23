@@ -1,10 +1,11 @@
-import BillingPage from "./pages/BillingPage";
+// components
+import OrderConfirmationPage from "./pages/orderConfirmationPage";
 
 function App() {
   return (
-    <div className="App">
-      <BillingPage />
-    </div>  
+    <>
+      <OrderConfirmationPage />
+    </>  
   );
 }
 
