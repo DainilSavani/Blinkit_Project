@@ -16,3 +16,11 @@ $borderSide: $borderValue solid rgb(188, 187, 187);
     justify-content: $contentPosition;
     align-items: $itemPosition;
 }
+
+@mixin cartBtn {
+    background-color: green;
+    color: white;
+    border: 0;
+    border-radius: $borderValue*10;
+    cursor: pointer;
+}
