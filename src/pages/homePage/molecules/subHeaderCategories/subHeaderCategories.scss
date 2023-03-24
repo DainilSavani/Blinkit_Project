@@ -1,30 +1,14 @@
-@use "sass:math";
-@import '../../../mixin';
+@import '../../../../commonlyUsedStyles.scss';
+@import '../commonlyUsedStyles.scss';
 
 ul.list {
-    @include initial;
+    @include initialStyle;
     @include flexDisplay(space-around);
     padding: 0 10rem;
     border-top: $borderSide;
     border-bottom: $borderSide;
 
-    li, select {
-        padding: 0.8rem 1rem;
-        font-size: 0.9rem;
-        color: gray;
-        margin: 0;
-        list-style-type: none;
-
-        &:hover {
-            cursor: pointer;
-            background-color: rgb(238, 238, 238);
-        }
+    li {
+        @include categoriesStyle();
     }
-    select {
-        border: 0;
-        height: 2.6rem;
-        padding: 0.2rem;
-        width: 4rem;
-    }
-    
 }
