@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
 
-//importing constants and functions
-import { FILTER_TYPES, CART_DETAILS } from '../helper/constData';
+// contants
+import  CART_DETAILS from './contants/homePageConstants';
 
-//importing components
-import Navbar from '../organism/navBar';
+// helper functions
+import { stateSetter, dataFetchError } from './helpers/homePage.general';
+
+// components
+import Navbar from '../../molecules/header/navbar';
 import SubHeaderCategories from './molecules/subHeaderCategories'
-import MainProductSection from './organism/mainProductSection';
-import ServiceSection from '../molecules/services';
-import Footer from '../molecules/footer';
+import MainProductSection from './organisms/mainProductSection';
+import ServiceSection from '../../molecules/services/servicesSection';
+import Footer from '../../molecules/footerContent/footer';
+
+// style
+import './homePage.scss';
 
 class HomePage extends Component {
     constructor(props) {
@@ -17,34 +23,32 @@ class HomePage extends Component {
             vegetableItems: [],
             cartDetails: CART_DETAILS,
             searchBarValue: "",
-            filterType: FILTER_TYPES[0].value
         }
         this.setState = this.setState.bind(this);
     }
     componentDidMount() {
         fetch('http://localhost:5000/VEGETABLE_ITEMS')  //fetching data through json server
         .then(response => response.json())
-        .then(result => this.setState(prevState => ({...prevState, vegetableItems: result})))
-        .catch(console.log);
+        .then(result => stateSetter(this.setState, result))
+        .catch(dataFetchError);
     }
     
     render() {
         return (
-            <>
+            <div className='homePage'>
                 <Navbar 
                     cartDetails = { this.state.cartDetails } 
-                    setState = { this.setState }
+                    homePageSetState = { this.setState }
                 />
                 <SubHeaderCategories />
                 <MainProductSection 
                     vegetableItems = { this.state.vegetableItems } 
                     searchBarValue = { this.state.searchBarValue }
-                    filterType = { this.state.filterType }
-                    setState = { this.setState }
+                    homePageSetState = { this.setState }
                 />
                 <ServiceSection />
                 <Footer />
-            </>
+            </div>
         )
     }
 }

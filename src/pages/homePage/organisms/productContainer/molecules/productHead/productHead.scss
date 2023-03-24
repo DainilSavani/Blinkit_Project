@@ -1,0 +1,11 @@
+@import '../../../../../../commonlyUsedStyles.scss';
+
+
+header.productHead {
+    @include flexDisplay(space-between);
+    @include border();
+    h2 {
+        font-size: 0.9rem;
+        padding-left: 1rem;
+    }
+}
