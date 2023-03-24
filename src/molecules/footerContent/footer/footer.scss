@@ -1,0 +1,14 @@
+@import '../../../commonlyUsedStyles.scss';
+
+section.footer {
+    @include initialStyle;
+    @include flexDisplay(space-between);
+    text-align: center;
+    margin: 1.5rem 10rem;
+    color: gray;
+    flex-wrap: wrap;
+
+    div.footLeft {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,136 @@
+{
+    "VEGETABLE_ITEMS": [
+        {
+            "name": "New Potato",
+            "src": "https://cdn.grofers.com/app/images/category/cms_images/icon/1489_1643613620694.png",
+            "discount": "18% OFF",
+            "sourced": "Sourced at 5 AM",
+            "count" : 0,
+            "weight": 1,
+            "discountedPrice": 15,
+            "originalPrice": 17,
+            "type": "veg"
+        },
+        {
+            "name": "Onion",
+            "src": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=270/app/images/products/sliding_image/391306a.jpg?ts=1652789363",
+            "discount": "21% OFF",
+            "sourced": "Sourced at 5 AM",
+            "count" : 0,
+            "weight": 1,
+            "discountedPrice": 32,
+            "originalPrice": 41,
+            "type": "veg"
+        },
+        {
+            "name": "Local Carrot",
+            "src": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=270/app/images/products/sliding_image/423734a.jpg?ts=1671100123",
+            "discount": "10% OFF",
+            "sourced": "Sourced at 5 AM",
+            "count" : 0,
+            "weight": 0.5,
+            "discountedPrice": 17,
+            "originalPrice": 19,
+            "type": "veg"
+        },
+        {
+            "name": "Green Chilli",
+            "src": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=270/app/images/products/sliding_image/423735a.jpg?ts=1639905261",
+            "discount": "16% OFF",
+            "sourced": "Sourced at 5 AM",
+            "count" : 0,
+            "weight": 0.1,
+            "discountedPrice": 10,
+            "originalPrice": 12,
+            "type": "veg"
+        },
+        {
+            "name": "Hybrid Tomato",
+            "src": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=270/app/images/products/sliding_image/3881a.jpg?ts=1671620195",
+            "discount": "23% OFF",
+            "sourced": "Sourced at 5 AM",
+            "count" : 0,
+            "weight": 0.5,
+            "discountedPrice": 15,
+            "originalPrice": 19,
+            "type": "veg"
+        },
+        {
+            "name": "Cauliflower",
+            "src": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=270/app/images/products/sliding_image/477009a.jpg?ts=1639905883",
+            "discount": "17% OFF",
+            "sourced": "Sourced at 5 AM",
+            "count" : 0,
+            "weight": 0.5,
+            "discountedPrice": 23,
+            "originalPrice": 28,
+            "type": "veg"
+        },
+        {
+            "name": "Desi Tomato",
+            "src": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=270/app/images/products/sliding_image/445675a.jpg?ts=1648026977",
+            "discount": "16% OFF",
+            "sourced": "Sourced at 5 AM",
+            "count" : 0,
+            "weight": 0.5,
+            "discountedPrice": 20,
+            "originalPrice": 24,
+            "type": "veg"
+        },
+        {
+            "name": "Ginger",
+            "src": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=270/app/images/products/sliding_image/421703a.jpg?ts=1639905261",
+            "discount": "21% OFF",
+            "sourced": "Sourced at 5 AM",
+            "count" : 0,
+            "weight": 0.25,
+            "discountedPrice": 37,
+            "originalPrice": 47,
+            "type": "veg"
+        },
+        {
+            "name": "Sweet Potato",
+            "src": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=270/app/images/products/sliding_image/3952a.jpg?ts=1660305579",
+            "discount": "12% OFF",
+            "sourced": "Sourced at 5 AM",
+            "count" : 0,
+            "weight": 0.6,
+            "discountedPrice": 55,
+            "originalPrice": 60,
+            "type": "veg"
+        },
+        {
+            "name": "Bitter Gourd",
+            "src": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=270/app/images/products/sliding_image/240847a.jpg?ts=1637664759",
+            "discount": "14% OFF",
+            "sourced": "Sourced at 5 AM",
+            "count" : 0,
+            "weight": 0.25,
+            "discountedPrice": 29,
+            "originalPrice": 34,
+            "type": "veg"
+        }, 
+        {
+            "name": "Chicken",
+            "src": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=270/app/images/products/sliding_image/459707a.jpg?ts=1635327974",
+            "discount": "20% OFF",
+            "sourced": "Sourced at 5 AM",
+            "count" : 0,
+            "weight": 0.45,
+            "discountedPrice": 168,
+            "originalPrice": 210,
+            "type": "non-veg"
+        }, 
+        {
+            "name": "Eggs",
+            "src": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=270/app/images/products/sliding_image/498143a.jpg",
+            "discount": "27% OFF",
+            "sourced": "Sourced at 5 AM",
+            "count" : 0,
+            "weight": 0.36,
+            "discountedPrice": 69,
+            "originalPrice": 95,
+            "type": "non-veg"
+        }
+    ]
+}

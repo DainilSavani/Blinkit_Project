@@ -1,0 +1,19 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import '../../../commonlyUsedStyles.scss';
+
+div.footerRight {
+    @include initialStyle;
+    a.fa{
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0.1rem 0.7rem 0.1rem 0.1rem;
+        text-align: center;
+        background-color: rgb(36, 36, 38);
+        border-radius: 3rem;
+        padding: 0.5rem;
+    }
+    a.fa-facebook{
+        width: 0.9rem;
+    }
+}
