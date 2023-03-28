@@ -1,0 +1,31 @@
+@import '../../../mixin';
+
+section.mainBillSection {
+    @include initial;
+    width: 47rem;
+    margin: auto;
+}
+section.emptyCartMainSection {
+    @include initial;
+    width: 47rem;
+    margin: auto auto 5rem;
+    text-align: center;
+
+    img#emptyCart {
+        width: 15rem;
+    }
+    h3.emptyCartDisc {
+        margin: 1rem;
+    }
+    p.emptyCartDisc {
+        color: gray;
+    }
+    button.emptyCartBtn {
+        @include cartBtn;
+        margin-top: 1rem;
+        height: 2rem;
+        font-size: 1rem;
+        font-weight: bold;
+        width: 9rem;
+    }
+}

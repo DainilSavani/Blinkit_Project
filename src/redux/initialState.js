@@ -1,9 +1,12 @@
-import VEGETABLE_ITEMS from '../data/vegetableData.json';
-import { CART_STATUS } from '../data/constData';
+const CART_DETAILS = {
+    itemsCount: 14,
+    itemsOriginalPrice: 415,
+    itemsDiscountedPrice: 341
+}
 
 const initialState = {
-    vegetableItems: VEGETABLE_ITEMS,
-    cartStatus: CART_STATUS,
+    vegetableItems: [],
+    cartDetails: CART_DETAILS,
     searchBarValue: "",
 }
 
