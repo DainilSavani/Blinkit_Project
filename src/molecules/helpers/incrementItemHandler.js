@@ -23,11 +23,11 @@ const incrementClickHandler = (props) => {
 
 incrementClickHandler.propTypes = {
     itemIndex: PropTypes.number,
-    parentSetState: PropTypes.func
+    homePageSetState: PropTypes.func
 }
 incrementClickHandler.defaultProps = {
     itemIndex: -1,
-    parentSetState: () => {}
+    homePageSetState: () => {}
 }
 
 export default incrementClickHandler;

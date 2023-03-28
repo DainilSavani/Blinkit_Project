@@ -1,5 +1,5 @@
 // constants
-import LOCATIONS from "../constants/locationData";
+import LOCATIONS from "../constants/locationConstants";
 
 export const renderLocations = () =>
     LOCATIONS.map(location =>
