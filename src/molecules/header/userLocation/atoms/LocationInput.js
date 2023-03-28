@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 // helper functions
-import { renderLocations } from '../helpers/userLocation.general';
+import { renderLocations } from '../helpers/renderLocations';
 
 class LocationInput extends Component {
     constructor(props) {
