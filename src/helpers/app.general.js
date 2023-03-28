@@ -1,5 +1,5 @@
-export const stateSetter = (homePageSetState, result) => {
-    homePageSetState(prevState => (
+export const stateSetter = (setState, result) => {
+    setState(prevState => (
         {...prevState, vegetableItems: result}
         )
     )

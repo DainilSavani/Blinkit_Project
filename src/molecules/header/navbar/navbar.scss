@@ -9,6 +9,19 @@ header.navBar {
         text-align: center;
         margin: 0 0.5rem;
     }
+    a {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+    }
+    a.logoLink {
+        height: 5.2rem;
+        img#logo {
+            width: 6.5rem;
+            border-right: $borderSide;
+            padding: 0 1.3rem;
+        }
+    }
     img#logo {
         width: 6.5rem;
         border-right: $borderSide;
