@@ -37,7 +37,8 @@ section.paymentProceedSection {
                 margin: 0 0.2rem;
                 font-weight: bold;
             }
-            s{
+
+            s {
                 margin: 0 0.2rem
             }
         }
@@ -45,8 +46,15 @@ section.paymentProceedSection {
         div.proceedBtn {
             font-weight: bold;
             cursor: pointer;
-            p{
+
+            a {
                 margin: 0;
+                padding: 0;
+                text-decoration: none;
+                color: white;
+                p {
+                    margin: 0;
+                }
             }
         }
     }

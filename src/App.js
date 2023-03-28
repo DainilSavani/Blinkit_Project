@@ -50,6 +50,7 @@ export class App extends Component {
           <Route path='/confirmation' element={
             <OrderConfirmationPage
               cartDetails={this.state.cartDetails}
+              appSetState={this.setState} 
             />
           }/>
         </Routes>

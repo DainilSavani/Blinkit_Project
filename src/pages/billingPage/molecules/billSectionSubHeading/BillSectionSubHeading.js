@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 // helper function
-import clearCartClickHandler from './helpers/BillSectionHeading.general';
+import clearCartClickHandler from '../../../../helpers/clearShoppingData';
 
 // components
 import DeliverySubHeading from './atoms';

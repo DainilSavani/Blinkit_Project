@@ -2,12 +2,16 @@ import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { Link } from 'react-router-dom';
 
+// helper functions
+import clearCartClickHandler from '../../../../helpers/clearShoppingData';
+
 // style
 import './orderConfirmationSection.scss';
 
 class OrderConfirmationSection extends Component {
     render() {
-        const { itemsDiscountedPrice, itemsOriginalPrice } = this.props.cartDetails;
+        const { cartDetails, appSetState } = this.props;
+        const { itemsDiscountedPrice, itemsOriginalPrice } = cartDetails;
         return (
             <div className='orderConfirmationSection'>
                 <i className='fa fa-check-circle'></i>
@@ -16,7 +20,7 @@ class OrderConfirmationSection extends Component {
                 <p className='billAmount'>Total amount paid: <b>₹{itemsDiscountedPrice}</b> <s>₹{itemsOriginalPrice}</s></p>
                 <p className='totalSavnigs'>Total savings: <b>₹{itemsOriginalPrice - itemsDiscountedPrice}</b></p>
                 <Link to='/' className='logoLink'>
-                    <button className='orderDetails'>continue shopping</button>
+                    <button className='orderDetails' onClick={() => clearCartClickHandler(appSetState)}>continue shopping</button>
                 </Link>
             </div>
         )
