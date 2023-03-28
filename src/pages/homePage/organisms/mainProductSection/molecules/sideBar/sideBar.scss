@@ -6,11 +6,11 @@ div.subCat {
 
     &:hover {
         background-color: rgb(214, 246, 231);
-        border-left: 0.3rem solid green;
+        border-left: 0.25rem solid green;
         cursor: pointer;
 
         div.subCatImg {
-            margin: 0.8rem 1rem 0.8rem 0.7rem;
+            margin: 0.8rem 1rem 0.8rem 0.75rem;
         }
     }
 

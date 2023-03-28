@@ -7,22 +7,6 @@ div.billItemBtn {
     width: 5rem;
 
     div, button {
-        border: none;
-        color: white;
-        background-color: green;
-        width: 5rem;
-        height: 2rem;
-        font-size: 1.05rem;
-        @include flexDisplay();
-    
-        &:nth-child(1) {
-            border-radius: 0.4rem 0 0 0.4rem;
-            cursor: pointer;
-        }
-    
-        &:nth-child(3) {
-            border-radius: 0 0.4rem 0.4rem 0;
-            cursor: pointer;
-        }
+        @include addItemBtn;
     }
 }

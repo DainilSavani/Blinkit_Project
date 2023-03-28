@@ -47,7 +47,7 @@ ProductItem.propTypes = {
     filterType: PropTypes.string
 }
 ProductItem.defaultProps = {
-    vegetableItem: [],
+    vegetableItems: [],
     searchBarValue: "",
     filterType: ""
 }

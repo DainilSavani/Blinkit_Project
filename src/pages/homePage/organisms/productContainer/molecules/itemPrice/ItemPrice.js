@@ -25,7 +25,7 @@ ItemPrice.propTypes = {
     vegetableItem: PropTypes.object
 }
 ItemPrice.defaultProps = {
-    vegetableItem: {}
+    vegetableItem: []
 }
 
 export default ItemPrice
