@@ -1,0 +1,12 @@
+@import '../../commonlyUsedStyles.scss';
+
+button.addBtn {
+    width: 5rem;
+    font-size: 1rem;
+    color: green;
+    background-color: rgb(214, 246, 231);
+    @include border(0.03125rem, green);
+    border-radius: $borderValue*10;
+    height: 2rem;
+    cursor: pointer;
+}

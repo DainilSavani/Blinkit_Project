@@ -1,0 +1,10 @@
+@import '../../../commonlyUsedStyles.scss';
+
+input#searchBar {
+    @include initialStyle;
+    @include border(0.0625rem, gray);
+    width: 45rem;
+    font-size: 1.2rem;
+    border-radius: $borderValue*10;
+    padding: 0.3rem 0.6rem;
+}
