@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
+import { Link } from 'react-router-dom';
 
 // helper functions
 import clearCartClickHandler from '../../../../helpers/clearShoppingData';
@@ -22,7 +23,9 @@ class OrderConfirmationSection extends Component {
                 <p>Your order will arrive in 10 minutes.</p>
                 <p className='billAmount'>Total amount paid: <b>₹{itemsDiscountedPrice}</b> <s>₹{itemsOriginalPrice}</s></p>
                 <p className='totalSavnigs'>Total savings: <b>₹{itemsOriginalPrice - itemsDiscountedPrice}</b></p>
-                <button className='orderDetails' onClick={() => clearCartClickHandler(clearItemHandler, clearCartHandler)}>continue shopping</button>
+                {/* <Link to='/' className='logoLink'> */}
+                    <button className='orderDetails' onClick={() => clearCartClickHandler(clearItemHandler, clearCartHandler)}>continue shopping</button>
+                {/* </Link> */}
             </div>
         )
     }

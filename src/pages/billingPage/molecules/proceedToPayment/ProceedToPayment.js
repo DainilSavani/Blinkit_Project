@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
+import { Link } from 'react-router-dom';
 
 // component
 import ProceedToPaymentItems from './atoms';
@@ -19,7 +20,9 @@ class ProceedToPayment extends Component {
                         <div className='proceedBar'>
                             <ProceedToPaymentItems {...this.props} />
                             <div className="proceedBtn">
-                                <p>Proceed {'>'}</p>
+                                <Link to='/confirmation'>
+                                    <p>Proceed {'>'}</p>
+                                </Link>
                             </div>
                         </div>
                     </div>

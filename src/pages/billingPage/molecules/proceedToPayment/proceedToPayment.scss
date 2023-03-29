@@ -45,8 +45,13 @@ section.paymentProceedSection {
         div.proceedBtn {
             font-weight: bold;
             cursor: pointer;
-            p{
+            a {
                 margin: 0;
+                text-decoration: none;
+                color: white;
+                p{
+                    margin: 0;
+                }
             }
         }
     }
