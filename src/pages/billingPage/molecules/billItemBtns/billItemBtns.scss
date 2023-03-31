@@ -1,0 +1,31 @@
+@import '../../../../commonlyUsedStyles.scss';
+
+div.billItemBtnSection {
+    @include flexDisplay();
+    margin-left: auto;
+    margin-right: 0;
+
+    div.billItemBtn {
+        @include flexDisplay();
+        width: 5rem;
+        margin-right: 1rem;
+
+        div, button {
+            @include addItemBtn;
+        }
+    }
+}
+button.removeItem {
+    width: 5rem;
+    height: 2rem;
+    color: white;
+    border-radius: 0.4rem;
+    border: 0;
+    cursor: pointer;
+    width: 5rem;
+    background-color: rgb(210, 37, 37);
+
+    &:hover {
+        background-color: rgb(158, 27, 27);
+    }
+}

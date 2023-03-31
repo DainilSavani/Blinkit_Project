@@ -1,0 +1,14 @@
+@import '../../../../commonlyUsedStyles.scss';
+@import '../commonlyUsedStyles.scss';
+
+ul.list {
+    @include initialStyle;
+    @include flexDisplay(space-around);
+    padding: 0 10rem;
+    border-top: $borderSide;
+    border-bottom: $borderSide;
+
+    li {
+        @include categoriesStyle();
+    }
+}

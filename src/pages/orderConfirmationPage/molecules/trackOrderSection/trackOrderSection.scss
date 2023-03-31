@@ -1,0 +1,14 @@
+@import '../../../../commonlyUsedStyles.scss';
+
+div.trackOrder {
+    @include initialStyle;
+    @include flexDisplay(space-around, center);
+    width: 80rem;
+    margin: 0 auto;
+    border-radius: 0.6rem;
+    background-color: rgb(180, 251, 176);
+
+    img.trackOrderImage {
+        width: 25rem;
+    }
+}
