@@ -1,6 +1,9 @@
 import produce from "immer";
 import { PropTypes } from 'prop-types';
 
+// constants
+import { updateDataInApi } from "../../../../../helpers/app.general";
+
 const removeFromCart = ({ itemIndex, appSetState }) => {
     appSetState(produce(draft => {
         const vegetableItem = draft.vegetableItems[itemIndex];
@@ -18,8 +21,10 @@ const removeItem = ({ itemIndex, appSetState }) => {
 }
 
 const removeItemClickHandler = (props) => {
+    const { itemIndex, vegetableItem } = props;
     removeFromCart(props);
     removeItem(props);
+    updateDataInApi(itemIndex, vegetableItem, 0);
 }
 
 removeItemClickHandler.propTypes = {

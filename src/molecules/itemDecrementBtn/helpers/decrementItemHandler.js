@@ -1,6 +1,9 @@
 import produce from "immer";
 import PropTypes from 'prop-types';
 
+// helper functions
+import { updateDataInApi } from "../../../helpers/app.general";
+
 const decrementItem = ({ itemIndex, appSetState }) => {
     appSetState(produce(draft => {
         draft.vegetableItems[itemIndex].count -= 1;
@@ -17,8 +20,10 @@ const decrementCart = ({ itemIndex, appSetState }) => {
 }
 
 const decrementClickHandler = (props) => {
+    const { itemIndex, vegetableItem } = props;
     decrementCart(props);
     decrementItem(props);
+    updateDataInApi(itemIndex, vegetableItem, vegetableItem.count-1);
 }
 
 decrementClickHandler.propTypes = {
@@ -27,7 +32,7 @@ decrementClickHandler.propTypes = {
 }
 decrementClickHandler.defaultProps = {
     itemIndex: -1,
-    appSetState: () => {}
+    appSetState: () => { }
 }
 
 export default decrementClickHandler;

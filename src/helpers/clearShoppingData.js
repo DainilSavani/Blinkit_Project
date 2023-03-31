@@ -1,11 +1,14 @@
 import produce from "immer";
 
+// helper function
+import { resetDataInApi } from "./app.general";
+
 const clearItem = (appSetState) => {
     appSetState(produce(draft => {
+        resetDataInApi(draft.vegetableItems);
         draft.vegetableItems.map(vegetableItem => {
             vegetableItem.count = 0;
-            return vegetableItem;
-        })
+        });
     }))
 }
 
@@ -17,7 +20,7 @@ const clearCart = (appSetState) => {
     }))
 }
 const clearCartClickHandler = (props) => {
-    clearItem(props);
+    clearItem(props)
     clearCart(props);
 }
 

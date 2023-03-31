@@ -1,10 +1,13 @@
 import produce from "immer";
 import PropTypes from 'prop-types';
 
+// helper functions
+import { updateDataInApi } from "../../helpers/app.general";
+
 const incrementItem = ({ itemIndex, appSetState }) => {
     appSetState(produce(draft => {
         draft.vegetableItems[itemIndex].count += 1;
-    }));
+    }))
 }
 
 const incrementCart = ({ itemIndex, appSetState }) => {
@@ -17,8 +20,10 @@ const incrementCart = ({ itemIndex, appSetState }) => {
 }
 
 const incrementClickHandler = (props) => {
+    const { itemIndex, vegetableItem } = props;
     incrementItem(props);
     incrementCart(props);
+    updateDataInApi(itemIndex, vegetableItem, vegetableItem.count+1);
 }
 
 incrementClickHandler.propTypes = {
