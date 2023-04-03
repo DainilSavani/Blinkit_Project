@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import incrementClickHandler from '../helpers/incrementItemHandler';
 
 // actions
-import { incrementItemHandler, incrementCartHandler } from "../../redux/actions";
+import { vegetableItemsUpdate, itemsCartUpdate } from "../../redux/actions";
 
 class ItemIncrementBtn extends Component {
     render() {
@@ -17,8 +17,8 @@ class ItemIncrementBtn extends Component {
 
 const mapDispatchToProps = dispatch => {
     return {
-        incrementItemHandler: itemIndex => dispatch(incrementItemHandler(itemIndex)),
-        incrementCartHandler: itemIndex => dispatch(incrementCartHandler(itemIndex))
+        vegetableItemsUpdate: (itemIndex, vegetableItem, result) => dispatch(vegetableItemsUpdate(itemIndex, vegetableItem, result)),
+        itemsCartUpdate: (itemIndex, result, isIncrement) => dispatch(itemsCartUpdate(itemIndex, result, isIncrement))
     }
 }
 

@@ -7,14 +7,14 @@ import { Link } from 'react-router-dom';
 import clearCartClickHandler from '../../../../helpers/clearShoppingData';
 
 // actions
-import { clearItemHandler, clearCartHandler } from '../../../../redux/actions'
+import { vegetableItemsUpdate, clearCartStateUpdate } from '../../../../redux/actions'
 
 // style
 import './orderConfirmationSection.scss';
 
 class OrderConfirmationSection extends Component {
     render() {
-        const { cartDetails, clearItemHandler, clearCartHandler } = this.props;
+        const { cartDetails } = this.props;
         const { itemsDiscountedPrice, itemsOriginalPrice } = cartDetails;
         return (
             <div className='orderConfirmationSection'>
@@ -24,7 +24,7 @@ class OrderConfirmationSection extends Component {
                 <p className='billAmount'>Total amount paid: <b>₹{itemsDiscountedPrice}</b> <s>₹{itemsOriginalPrice}</s></p>
                 <p className='totalSavnigs'>Total savings: <b>₹{itemsOriginalPrice - itemsDiscountedPrice}</b></p>
                 <Link to='/' className='logoLink'>
-                    <button className='orderDetails' onClick={() => clearCartClickHandler(clearItemHandler, clearCartHandler)}>continue shopping</button>
+                    <button className='orderDetails' onClick={() => clearCartClickHandler({...this.props})}>continue shopping</button>
                 </Link>
             </div>
         )
@@ -33,24 +33,27 @@ class OrderConfirmationSection extends Component {
 
 OrderConfirmationSection.propTypes = {
     cartDetails: PropTypes.object,
-    clearItemHandler: PropTypes.func,
-    clearCartHandler: PropTypes.func
+    vegetableItems: PropTypes.array,
+    vegetableItemsUpdate: PropTypes.func,
+    clearCartStateUpdate: PropTypes.func
 }
 OrderConfirmationSection.defaultProps = {
     cartDetails: {},
-    clearItemHandler: () => {},
-    clearCartHandler: () => {}
+    vegetableItems: [],
+    vegetableItemsUpdate: () => {},
+    clearCartStateUpdate: () => {}
 }
 
 const mapStateToProps = state => {
     return {
+        vegetableItems: state.vegetableItems,
         cartDetails: state.cartDetails
     }
 }
 const mapDispatchToProps = dispatch => {
     return {
-        clearItemHandler: () => dispatch(clearItemHandler()),
-        clearCartHandler: () => dispatch(clearCartHandler())
+        vegetableItemsUpdate: (itemIndex, vegetableItem, result) => dispatch(vegetableItemsUpdate(itemIndex, vegetableItem, result)),
+        clearCartStateUpdate: () => dispatch(clearCartStateUpdate())
     }
 }
 

@@ -1,20 +1,22 @@
 import PropTypes from 'prop-types';
 
-const removeItemClickHandler = (itemIndex, removeItemHandler, removeFromCartHandler) => {
-    removeFromCartHandler(itemIndex);
-    removeItemHandler(itemIndex);
+const removeItemClickHandler = ({itemIndex, vegetableItem, vegetableItemsUpdate, itemsCartUpdate}) => {
+    itemsCartUpdate(itemIndex, vegetableItem.count, false);
+    vegetableItemsUpdate(itemIndex, vegetableItem, 0);
 }
 
 removeItemClickHandler.propTypes = {
     itemIndex: PropTypes.number,
-    removeItemHandler: PropTypes.func,
-    removeFromCartHandler: PropTypes.func
+    vegetableItem: PropTypes.object,
+    vegetableItemsUpdate: PropTypes.func,
+    itemsCartUpdate: PropTypes.func
 }
 
 removeItemClickHandler.defaultProps = {
     itemIndex: -1,
-    removeItemHandler: () => {},
-    removeFromCartHandler: () => {}
+    vegetableItem: {},
+    vegetableItemsUpdate: () => {},
+    itemsCartUpdate: () => {}
 }
 
 export default removeItemClickHandler;

@@ -3,21 +3,21 @@ import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 
 // helper function
-import clearCartClickHandler from './helpers/BillSectionHeading.general';
+import clearCartClickHandler from '../../../../helpers/clearShoppingData';
 
 // actions
-import { clearItemHandler, clearCartHandler } from '../../../../redux/actions'
+import { vegetableItemsUpdate, clearCartStateUpdate } from '../../../../redux/actions'
 
 // components
 import DeliverySubHeading from './atoms';
 
 class BillSectionSubHeading extends Component {
     render() {
-        const { cartItemsCount, clearItemHandler, clearCartHandler } = this.props;
+        const { cartItemsCount } = this.props;
         return (
             <div className='billSubHeading'>
                 <DeliverySubHeading cartItemsCount={cartItemsCount} />
-                <button className='clearCart' onClick={() => clearCartClickHandler(clearItemHandler, clearCartHandler)}>Clear Cart</button>
+                <button className='clearCart' onClick={() => clearCartClickHandler({...this.props})}>Clear Cart</button>
             </div>
         )
     }
@@ -25,26 +25,29 @@ class BillSectionSubHeading extends Component {
 
 const mapStateToProps = state => {
     return {
+        vegetableItems: state.vegetableItems,
         cartItemsCount: state.cartDetails.itemsCount
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        clearItemHandler: () => dispatch(clearItemHandler()),
-        clearCartHandler: () => dispatch(clearCartHandler())
+        vegetableItemsUpdate: (itemIndex, vegetableItem, result) => dispatch(vegetableItemsUpdate(itemIndex, vegetableItem, result)),
+        clearCartStateUpdate: () => dispatch(clearCartStateUpdate())
     }
 }
 
 BillSectionSubHeading.propTypes = {
     cartItemsCount: PropTypes.number,
-    clearItemHandler: PropTypes.func,
-    clearCartHandler: PropTypes.func
+    vegetableItems: PropTypes.array,
+    vegetableItemsUpdate: PropTypes.func,
+    clearCartStateUpdate: PropTypes.func
 }
 BillSectionSubHeading.defaultProps = {
     cartItemsCount: 0,
-    clearItemHandler: () => {},
-    clearCartHandler: () => {}
+    vegetableItems: [],
+    vegetableItemsUpdate: () => {},
+    clearCartStateUpdate: () => {}
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(BillSectionSubHeading);

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { PropTypes } from "prop-types";
 
 // constants
-import CART_DETAILS from '../../../../constants/initialCartConstants';
+import { CART_DETAILS } from '../../../../constants/app.general';
 
 class CartText extends Component {
     render() {

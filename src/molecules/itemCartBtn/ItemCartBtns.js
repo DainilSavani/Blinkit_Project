@@ -18,7 +18,7 @@ class ItemCartBtns extends Component {
                 <div className='itemValue'>{vegetableItem.count}</div>
                 <ItemIncrementBtn  {...this.props} />
             </div>
-            : <ItemAddBtn itemIndex={itemIndex} />
+            : <ItemAddBtn {...this.props} />
     }
 }
 

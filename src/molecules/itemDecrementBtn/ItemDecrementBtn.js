@@ -1,24 +1,24 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'; 
+import { connect } from 'react-redux';
 
 // helper functions
 import decrementClickHandler from './helpers/decrementItemHandler';
 
 // actions
-import { decrementItemHandler, decrementCartHandler } from "../../redux/actions";
+import { vegetableItemsUpdate, itemsCartUpdate } from "../../redux/actions";
 
 class ItemDecrementBtn extends Component {
     render() {
         return (
-            <button className='decreaseItem' onClick={() => decrementClickHandler({...this.props})}>-</button>
+            <button className='decreaseItem' onClick={() => decrementClickHandler({ ...this.props })}>-</button>
         )
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        decrementItemHandler: itemIndex => dispatch(decrementItemHandler(itemIndex)),
-        decrementCartHandler: itemIndex => dispatch(decrementCartHandler(itemIndex))
+        vegetableItemsUpdate: (itemIndex, vegetableItem, result) => dispatch(vegetableItemsUpdate(itemIndex, vegetableItem, result)),
+        itemsCartUpdate: (itemIndex, result, isIncrement) => dispatch(itemsCartUpdate(itemIndex, result, isIncrement))
     }
 }
 

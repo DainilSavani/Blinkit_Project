@@ -9,18 +9,17 @@ import ItemCartBtns from '../../../../molecules/itemCartBtn';
 import removeItemClickHandler from './helpers/billItemBtns.general';
 
 // actions
-import { removeItemHandler, removeFromCartHandler } from '../../../../redux/actions'
+import { vegetableItemsUpdate, itemsCartUpdate } from '../../../../redux/actions'
 
 // style
 import './billItemBtns.scss';
 
 class BillItemBtns extends Component {
     render() {
-        const { vegetableItem, itemIndex, removeItemHandler, removeFromCartHandler } = this.props;
         return (
             <div className="billItemBtnSection">
-                <ItemCartBtns itemIndex={itemIndex} vegetableItem={vegetableItem} />
-                <button className="removeItem" onClick={() => removeItemClickHandler(itemIndex, removeItemHandler, removeFromCartHandler)}>Remove</button>
+                <ItemCartBtns {...this.props} />
+                <button className="removeItem" onClick={() => removeItemClickHandler({...this.props})}>Remove</button>
             </div>
         )
     }
@@ -28,8 +27,8 @@ class BillItemBtns extends Component {
 
 const mapDispatchToProps = dispatch => {
     return {
-        removeItemHandler: itemIndex => dispatch(removeItemHandler(itemIndex)),
-        removeFromCartHandler: itemIndex => dispatch(removeFromCartHandler(itemIndex))
+        vegetableItemsUpdate: (itemIndex, vegetableItem, result) => dispatch(vegetableItemsUpdate(itemIndex, vegetableItem, result)),
+        itemsCartUpdate: (itemIndex, result, isIncrement) => dispatch(itemsCartUpdate(itemIndex, result, isIncrement))
     }
 }
 

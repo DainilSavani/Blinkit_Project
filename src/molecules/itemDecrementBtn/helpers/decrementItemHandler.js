@@ -1,19 +1,21 @@
 import PropTypes from 'prop-types';
 
-const decrementClickHandler = ({itemIndex, decrementItemHandler, decrementCartHandler}) => {
-    decrementItemHandler(itemIndex);
-    decrementCartHandler(itemIndex);
+const decrementClickHandler = ({itemIndex, vegetableItem, vegetableItemsUpdate, itemsCartUpdate}) => {
+    vegetableItemsUpdate(itemIndex, vegetableItem, vegetableItem.count-1);
+    itemsCartUpdate(itemIndex, 1, false);
 }
 
 decrementClickHandler.propTypes = {
     itemIndex: PropTypes.number,
-    decrementItemHandler: PropTypes.func,
-    decrementCartHandler: PropTypes.func
+    vegetableItem: PropTypes.object,
+    vegetableItemsUpdate: PropTypes.func,
+    itemsCartUpdate: PropTypes.func
 }
 decrementClickHandler.defaultProps = {
     itemIndex: -1,
-    decrementItemHandler: () => {},
-    decrementCartHandler: () => {}
+    vegetableItem: {},
+    vegetableItemsUpdate: () => {},
+    itemsCartUpdate: () => {}
 }
 
 export default decrementClickHandler;
