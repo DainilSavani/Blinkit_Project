@@ -1,0 +1,12 @@
+@import '../../commonlyUsedStyles.scss';
+
+div.billItemBtn {
+    @include flexDisplay();
+    margin-left: auto;
+    margin-right: 0;
+    width: 5rem;
+
+    div, button {
+        @include addItemBtn;
+    }
+}
